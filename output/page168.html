@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 168</title>
+<meta name="description" content="Page 168">
+<link rel="canonical" href="https://thenewsday112.github.io/pyton/page168.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="politics.html">📰 Politics</a><a href="world.html">📰 World</a><a href="finance.html">📰 Finance</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 168</h1>
+<article class="article-card" id="artikel-4237">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Introducing Amazon ECS Gateway: A fully-managed ingress solution for ECS services", "image": [], "datePublished": "2026-10-20T17:03:38+00:00", "dateModified": "2026-10-20T17:03:38+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-4237"}</script>
+    <h2>Introducing Amazon ECS Gateway: A fully-managed ingress solution for ECS services</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp;
+        <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-ecs-gateway-a-fully-managed-ingress-solution-for-ecs-services/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><p>When platform teams manage containerized applications at scale on <a href="https://aws.amazon.com/ecs/?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">Amazon Elastic Container Service (Amazon ECS)</a>, configuring ingress networking for each service often becomes a bottleneck. For every new service, teams must provision and connect <a href="https://aws.amazon.com/elasticloadbalancing/application-load-balancer/?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">Application Load Balancers (ALBs)</a>, <a href="https://aws.amazon.com/certificate-manager/?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">AWS Certificate Manager (ACM)</a> certificates, <a href="https://aws.amazon.com/waf/?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">AWS WAF</a> web ACLs, and security groups, then keep those resources in sync as services scale, update, or operate. This per-service overhead slows down deployment velocity and increases the risk of configuration drift across an organization.</p> 
+<p>Today, we’re announcing <a href="https://aws.amazon.com/ecs/?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">Amazon ECS Gateway</a>, a new account-level resource that simplifies ingress networking for containerized workloads by dynamically provisioning and managing the necessary infrastructure on your behalf, with all resources created directly in your account.</p> 
+<p><img alt="" src="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/10/20/2026-ECS-Gateway-architecture.png"></p> 
+<p>ECS Gateway introduces a clear separation of responsibilities between platform teams and application teams.</p> 
+<ul> 
+ <li><strong>Platform teams</strong> create and configure a gateway, defining organizational networking standards including subnets, security groups, TLS certificates, listener settings, and WAF web ACLs, in a single place. They then associate the gateway with one or more ECS clusters, making it available to services running on those clusters.</li> 
+ <li><strong>Application teams</strong> opt their services in by adding a gateway connector parameter when creating or updating a service. ECS provisions the required per-service resources automatically: an ACM certificate, a unique DNS hostname, listener rules, target groups, and a service security group that permits inbound traffic only from the ALB. No networking expertise required.</li> 
+</ul> 
+<p>ECS Gateway offers host-based routing using ALBs and enables up to 25 services to share a single ALB, optimizing infrastructure costs. ECS manages the full lifecycle of the underlying infrastructure, provisioning the first ALB when your first service connects, adding more ALBs as capacity is reached, and removing them when no longer needed. Each service receives a unique DNS hostname, giving your teams a ready-to-use endpoint the moment provisioning completes.</p> 
+<p><strong>A first look at ECS Gateway</strong><br> In the <a href="https://console.aws.amazon.com/ecs/?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">ECS console</a>, platform team can create a gateway and sets its configuration. The infrastructure role is an IAM role that ECS assumes to provision and manage networking resources such as ALBs, security groups, and certificates in your account. To create a gateway, provide a gateway name and select an infrastructure role. You can optionally associate the gateway with ECS clusters during creation or later.</p> 
+<p>Choose a load balancing scheme, either public or VPC-internal traffic routing. Under <strong>Additional Settings</strong>, you can also set up a listener, port, maximum count of load balancers the gateway can scale to, and a web ACL lets you protect your web applications. Some settings, including the name, scheme, VPC, subnets, IP address type, listener protocol and port cannot be changed after gateway creation.</p> 
+<p><img alt="" src="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/09/02/2026-ecs-gateway-1-create.jpg"></p> 
+<p>Using <a href="https://aws.amazon.com/cli/?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">AWS Command Line Interface (AWS CLI)</a>, call CreateGateway with a name (unique per account), an infrastructure role, and a configuration object. No infrastructure is provisioned until a service connects with a gateway connector.</p> 
+
+aws ecs create-gateway \
+  --name my-team-gateway \
+  --infrastructure-role-arn arn:aws:iam::123456789012:role/ECSGatewayRole \
+  --configuration '{
+    "HostSharedAlb": {
+      "networkConfiguration": {
+        "subnets": [
+          "subnet-080779f9bd887757a",
+          "subnet-03d5b2fead6bc6258",
+          "subnet-0861210a397d31252",
+          "subnet-06539e194023cb77a"
+        ],
+        "ipAddressType": "ipv4"
+      },
+      "scheme": "internet-facing"
+    }
+  }'
+ 
+<p>Once the gateway is created, you can take a look at the detailed configuration, gateway routes, load balancers, and associated clusters.</p> 
+<p><img alt="" src="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/09/02/2026-ecs-gateway-1-create-2.jpg"></p> 
+<p>Now associate the gateway with one or more clusters (many-to-many), to make it available to ECS services on those clusters.</p> 
+<p><img alt="" src="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/09/02/2026-ecs-gateway-2-connect.jpg"></p> 
+<p>Use AssociateGatewayWithCluster to make the gateway available to services on a cluster:</p> 
+
+aws ecs associate-gateway-with-cluster \ 
+--gateway my-team-gateway \ 
+--cluster arn:aws:ecs:us-east-1:123456789012:cluster/my-cluster 
+<p>To create and manage the ECS Gateway programmatically, including calling APIs and searching documentation, try the <a href="https://docs.aws.amazon.com/agent-toolkit/latest/userguide/getting-started-aws-mcp-server.html?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">AWS MCP Server</a> and <a href="https://docs.aws.amazon.com/agent-toolkit/latest/userguide/plugins.html?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">plugins</a> with your preferred AI coding tool. To learn more, visit the <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/gateway-overview.html?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">Amazon ECS Gateway documentation</a>.</p> 
+<p><strong>ECS Gateway:Behind the scenes<br> </strong>A gateway can be associated with up to 10,000 clusters, and a single cluster supports up to five gateway associations. This many-to-many relationship gives platform teams the flexibility to share a gateway across environments or assign multiple gateways (for example, public and private) to a single cluster.</p> 
+<p>Platform teams can control access by choosing which gateways to associate with which clusters. For additional control, use IAM policies to restrict who can deploy services to specific clusters.</p> 
+<p>Application teams add the gateway connector to each service definition in CreateService or UpdateService. If you have an existing ECS service with its own load balancer, you can adopt ECS Gateway incrementally by calling UpdateService to add a gateway connector. Both ingress paths remain available, allowing you to validate the gateway connection before removing the existing load balancer configuration.</p> 
+
+aws ecs create-service \ 
+  --cluster my-cluster \ 
+  --service my-api-service \ 
+  --task-definition my-api-service:1 \ 
+  --gateway-connectors '[{ "portName": "api", "filters": {"accessTypes": ["PUBLIC"]}, "healthCheck": {...} }]' 
+<p>At deployment time, Amazon ECS evaluates the gateways associated with the cluster and connects the service to every compatible gateway. A gateway is compatible when its access type matches the service’s connector filter, it is in the same VPC as the service, and it covers all Availability Zones used by the service’s configured subnets.</p> 
+<p>For each connection, Amazon ECS assigns the service to an ALB with available capacity and provisions the per-service resources: an ACM certificate, a unique DNS hostname, a listener rule routing traffic for that hostname to the service target group, and a service security group allowing inbound traffic only from the ALB security group. If no existing ALB has capacity, ECS creates a new one (up to maxAlbCount referring to quota limit). Once provisioning completes, the gateway route becomes ACTIVE, and the service URL is ready to receive traffic.</p> 
+<p>ECS Gateway handles common operational scenarios automatically:</p> 
+<ul> 
+ <li><strong>Redeployments</strong>: On each deployment, ECS re-evaluates gateway associations. If new compatible gateways have been associated since the last deployment, your service connects to them. If a gateway has been disassociated, your service disconnects and the route is removed. Your service always reflects the current state of the cluster gateways at deployment time.</li> 
+ <li><strong>Service deletion</strong>: ECS automatically disconnects the service from every gateway, removes all gateway routes, and cleans up all per-service resources. If the service held the last route on an ALB, that ALB is deprovisioned.</li> 
+</ul> 
+<p><strong>Things to Know</strong><br> Here are a few important details to keep in mind:</p> 
+<ul> 
+ <li><strong>Networking</strong>: ECS Gateway is available for ECS services using the awsvpc network mode across all launch types (Amazon ECS EC2, AWS Fargate, and ECS Managed Instances). Your service Availability Zones (AZs) must be a subset of each gateway’s AZs on the cluster. A gateway ALB only routes traffic to tasks in AZs where it has subnets. We recommend creating gateways and services for a given cluster with the same set of AZs.</li> 
+ <li><strong>Capacity</strong>: If maxAlbCount is reached and no ALB has available capacity, the deployment fails. Default quota limit of maxAlbCount is 10. Plan your maxAlbCount setting according to the number of services you expect to connect.</li> 
+ <li><strong>Observability</strong>: Use ALB metrics in CloudWatch with the TargetGroup dimension to monitor per-service traffic, and LoadBalancer dimension to monitor traffic across the shared ALB. Use describe-target-health to check real-time target status. Configure CloudWatch alarms for metrics such as HealthyHostCount, TargetResponseTime, and HTTPCode_Target_5XX_Count, using gateway ARN-based tagging so monitoring scales automatically with your maxAlbCount.</li> 
+</ul> 
+<p><strong>Now available</strong><br> Amazon ECS Gateway is available now in all commercial AWS Regions where ECS is available at no additional charge. You pay only for the underlying infrastructure provisioned in your account when services connect to a gateway, including applicable ALB charges, CloudWatch logs and metrics, ACM certificates, and data transfer charges. To learn more, visit the <a href="https://aws.amazon.com/ecs/pricing/?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">Amazon ECS Pricing page</a>.</p> 
+<p>To get started,&nbsp;create your first gateway today in the <a href="https://console.aws.amazon.com/ecs/?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">ECS console</a>, and&nbsp;send feedback to <a href="https://repost.aws/tags/TAefn4YSprR-uCBYmbofOpHw/amazon-elastic-container-service?trk=d8ec3b19-0f37-4f8c-8c12-189f913e205c&amp;sc_channel=el">AWS re:Post for ECS</a> or through your usual AWS Support contacts.</p> 
+<p>— <a href="https://linkedin.com/in/channy">Channy</a></p></div>
+</article>
+<article class="article-card" id="artikel-2672">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "The ‘Tavern-Style’ Pizza Takeover", "image": [], "datePublished": "2026-10-20T16:15:00-04:00", "dateModified": "2026-10-20T16:15:00-04:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-2672"}</script>
+    <h2>The ‘Tavern-Style’ Pizza Takeover</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Food</strong> &nbsp;|&nbsp;
+        <a href="https://www.eater.com/trends/993640/tavern-style-pizza-thin-crust-trend-chicago-midwest" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+
+<img alt="a selection of three pizzas from la merna in washington, d.c. the pizzas are very thin and cut into grids as opposed to triangular slices." src="https://platform.eater.com/wp-content/uploads/sites/2/2026/10/la-merna-lede.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100">
+	
+
+	The thin-crust pizzas popular throughout the Midwest have taken off as the “tavern-style” pizza trend | Brad Bobrow/La Merna	
+
+<p>In the suburbs of Chicago where they both grew up, it was just pizza, according to Brittany and Brennan Grosvenor, the couple behind <a href="https://www.proofpnw.com/">Proof</a> in Portland, Oregon. Ordering came down to the question of “thin-crust, deep-dish, or <a href="https://salernospizza.com/double-dough-pizza/">double-dough</a>,” Brittany recalls of her family’s Friday night tradition. The Grosvernors sell the former at Proof, though the language of “thin crust” has given way to the more nationally familiar phrasing of “tavern-style,” the pizza trend that has swept from coast to coast in recent years.&nbsp;</p>
+
+<p>Outsiders might associate Chicago with its famous, tourist-beckoning deep-dish pizza, but Brittany says that’s just not reflective of reality, citing deep dish as a much less frequent treat than the Midwestern, thin-crust style that’s gaining popularity. “The pizza you get every week, or if you go to a kid’s birthday party, it’s always tavern-style,” she says.</p>
+
+<p>“Tavern-style” pizza — which is prevalent&nbsp; across the Midwest, with <a href="https://chicago.eater.com/2020/10/14/21492493/chicagos-tavern-style-pizza-pats-lakeview-photos-images">Chicago</a>, <a href="https://onmilwaukee.com/articles/knead-to-know-milwaukee-style-pizza">Milwaukee</a>, <a href="https://www2.startribune.com/why-do-minnesotans-cut-their-pizza-in-squares/600293084/">Minnesota</a>, and <a href="https://www.feastmagazine.com/hip-to-be-square-slicing-into-the-history-of-st-louis-style-pizza/article_871643ce-9d51-11e7-ab06-fb5e9511f76b.html">St. Louis</a> touting similar pies — is known for its thin, cracker-like crust, cut into a lattice instead of triangular slices. Depending on the region and the pizza shop where one’s nostalgia lies, the sauce might lean sweet or spicy. Lightness and crispness, though, is the style’s unique sell. Writing for <em>Esquire</em> in 2023, Omar Mamoon <a href="https://www.esquire.com/food-drink/restaurants/a43366499/best-tavern-style-pizza-us/">called the variant</a>, which was then still on the rise, “a foil” to famously thick Detroit-style pizza, which <a href="https://www.eater.com/2019/4/9/18300994/square-pizza-detroit-style-trend-buddys-emmy-squared-expansion">had its big moment in the late 2010s</a>.&nbsp;</p>
+<img alt="a cook uses a large, curved knife to cut a thin, tavern-style pizza" src="https://platform.eater.com/wp-content/uploads/sites/2/2026/10/proof-pizza_ede8af.jpg?quality=90&amp;strip=all&amp;crop=0,8.3333333333333,100,83.333333333333">
+<p>The beauty of the tavern-style pie is its shareability. A pizza yields more slices when cut into a grid than into triangles, explains Bradley Shorten, who’s behind both <a href="https://chicago.eater.com/venue/895734/kims-uncle-pizza">Kim’s Uncle Pizza</a> in his hometown Chicago suburb of Westmont, Illinois, and the recently opened <a href="https://dc.eater.com/venue/979064/la-merna">La Merna</a> in Washington, D.C. Pizza cut into little squares makes for great drinking food, especially since it fits on a cocktail napkin. What makes a good pie, according to Shorten, is that every square has a little of every ingredient; the toppings go to the edge. And while the four, small corner slices might not be the “best” ones, Shorten says, they’re the ones “everybody goes for,” especially if they’re from Chicago.</p>
+
+<p>Over the past few years, as <a href="https://www.grubstreet.com/article/nyc-new-taverns-lonnies-trudies-tavern-reviewed.html">“taverns” have become growing fixations</a> for a cadre of restaurateurs, the “party cut” pizza and <a href="https://www.eater.com/dining-out/915123/millennial-minimalism-maximalist-cozy-dining-decor-trends">tavern-style</a> pizza spots have also become ubiquitous, with openings like <a href="https://ny.eater.com/venue/978956/keepers">Keepers</a> in New York city; <a href="https://onetrickponypizza.com/">One Trick Pony</a> in Forth Worth, Texas; <a href="https://www.instagram.com/tilliestavernpizza">Tillie’s Tavern Pizza</a> in Wheat Ridge, Colorado; and <a href="https://chicago.eater.com/venue/115881/zarella-pizzeria-taverna">Zarella</a> and <a href="https://chicago.eater.com/venue/910031/dimmi-dimmi-corner-italian">Dimmi Dimmi Corner Italian</a> in Chicago, where the style has always been abundant. For some Chicagoans, these openings across the country are an opportunity to correct the record about their city’s pizza culture, and for other Midwesterners to <a href="https://chicago.eater.com/2023/8/8/23823605/st-louis-imos-pizza-tavern-style-riverfront-times-chicago-strikes-back-square-beyond-compare">claim their stake in the region’s pizza</a>, too.</p>
+
+<p>When Mike Fadem opened the second location of his popular NYC pizzeria <a href="https://ny.eater.com/venue/45041/ops">Ops</a> — known for its wood-fired Neapolitan-esque pies with leopard-spotted crusts and pliant dough — he wanted to offer something new. Fadem is from St. Louis, where the city’s namesake pizza is super-thin. Despite his love for it, “it’s maybe not the best version of tavern pizza,” Fadem admits, noting the iteration’s many critics, some of whom take issue with its use of the gooey processed cheese called provel. The trajectory of tavern-style pizza has been like a game of telephone, he explains: St. Louis pizza is derived from thin-crust Chicago pizza, which itself came from Neapolitan pizza. Divergence has accompanied each jump.</p>
+
+<p>One of Fadem’s employees at Ops, meanwhile, is from New Jersey, which claims <a href="https://www.seriouseats.com/crispy-bar-style-pizza-star-tavern-recipe">its own thin-crust, tavern- or bar-style pizza</a> tradition. (The <a href="https://boston.eater.com/maps/best-south-shore-bar-pizza-boston">bar pies of the Boston area</a> also have their own devoted following.) Accordingly, “I had this interest in ‘can we make an Ops version of this?’” Fadem says. With Ops known for sourdough, Fadem also wanted to highlight the rich flavor of whole grains. And he wanted it to be really crispy, a quality he says draws in New Yorkers. Fadem’s take is on the menu as the regionally agnostic “tavernetta.” Though St. Louis and New Jersey served as initial inspiration, the best pizza from his research was actually in Milwaukee. The Tavernetta hasn’t displaced the other pies at the restaurant; it’s ordered in addition to them, with most groups getting at least one.</p>
+
+<p>In June, Los Angeles cocktail spot <a href="https://www.barnextdoor.com/">Bar Next Door</a> celebrated its third anniversary <a href="https://www.latimes.com/food/list/best-restaurants-midwest-tavern-pizza-bar-pies-los-angeles">by adding food to its menu</a>. Previously, the bar had allowed customers to bring in pies from <a href="https://princestreetpizza.com/">Prince Street Pizza</a> next door since Prince Street co-owner Lawrence Longo is a partner in it. “But, you know, after having a slice, sometimes you get a little full and you’re like, <em>I want to go to bed</em>,” says owner and bar director Brynn Smith. “That’s the whole goal for us: for people to stay a little longer, drink more. We thought the tavern-style pizza would be perfect.” The fact that the pizzas — they’re technically listed on the menu as “bar pies,” to better go with the establishment’s name — are made exclusively for the bar by Prince Street just adds another reason for people to go out, Smith says.</p>
+<img alt="a spread including the pizza at la merna in washington, d.c." src="https://platform.eater.com/wp-content/uploads/sites/2/2026/10/IMG_3728-1.jpg?quality=90&amp;strip=all&amp;crop=0,0.46296296296296,100,99.074074074074">
+<p>The idea of the tavern as a social and convivial space is inseparable from the tavern-style pizza. Shorten’s goal with La Merna — <a href="https://dc.eater.com/restaurant-news/168784/dupont-circle-opening-chicago-tavern-style-pizza-la-merna">which he runs with his wife Meg Schmitt</a>, who grew up in St. Louis — was the feel of a Chicago dive bar or a Wisconsin supper club: a place with wood-paneled walls and checkered floors, where people could slide into a red leather booth for pitchers of beer and pizza and hang out for a while. As my colleague Francky Knapp <a href="https://www.eater.com/dining-out/915123/millennial-minimalism-maximalist-cozy-dining-decor-trends">wrote last year</a>, the rising appeal of the “tavern” vibe across restaurants nationwide is rooted in the sense of providing somewhere homey and lived-in. At taverns, diners are beckoned to sprawl out and stay awhile; to free themselves of pretense and to tap into something welcoming in its familiarity. This, for so many people, is exemplified by the archetype of hometown pizza shop, which is forever tethered in our cultural imaginations to the trappings of a previous, simpler era.</p>
+
+<p>It’s for this reason that, in Oregon, the Grosvenors have started serving their take on Bosco sticks, <a href="https://www.eater.com/2015/7/16/8928807/bosco-sticks-school-cafeteria-midwest">the stuffed breadsticks of Midwestern cafeterias</a>, and Italian beef with giardiniera. While they could find certain Midwestern hits around Portland, it sometimes frustrated them that they couldn’t find everything in one place. According to Brennan Grosvenor, “We’re just trying to embody the feeling: If you went into a tavern in Chicago, what could you order there?”</p></div>
+</article>
+<article class="article-card" id="artikel-4269">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How 3 Java Champions are using GitHub Copilot for increased productivity", "image": [], "datePublished": "2026-10-20T16:05:03+00:00", "dateModified": "2026-10-20T16:05:03+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-4269"}</script>
+    
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp;
+        <a href="https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><p>AI coding tools can generate code quickly, but speed alone does not solve the hardest software engineering problems. Developers still need to provide context, validate results, protect maintainability, and remain accountable for what ships.</p>
+
+
+
+<p>To learn how experienced developers strike that balance, we spoke with three Java Champions, all with over a decade of experience in using Java. They shared concrete examples of using GitHub Copilot in production and open source, along with the practices they use to turn AI-generated output into reliable software.</p>
+
+
+
+<p>Here are the tips they shared with us.</p>
+
+
+
+
+
+<h2>Meet the Java Champions</h2>
+
+
+
+<ul>
+<li><strong>Vlad Mihalcea</strong>, founder of Hypersistence and author of the book High-Performance Java Persistence</li>
+
+
+
+<li><strong>Patrick Baumgartner</strong>, software crafter at 42talents with 20+ years of Java experience</li>
+
+
+
+<li><strong>Frank Delporte</strong>, senior technical writer at Azul and maintainer of Foojay.io with 15+ years of Java experience</li>
+</ul>
+
+
+
+
+<h2>Vlad Mihalcea</h2>
+
+
+
+<p>GitHub profile: <a href="https://github.com/vladmihalcea">@vladmihalcea</a></p>
+
+
+
+<p><strong>How has GitHub Copilot helped you recently?</strong></p>
+
+
+
+<p>I&rsquo;ve been using it to analyze, design, and implement various features in both Hypersistence Utils and Hypersistence Optimizer.</p>
+
+
+
+<p>For example, I&rsquo;ve been wanting for a long time to develop a web application that provides Optimizer event history so we can see how performance improvement efforts are materializing in application performance. Before AI, I kept postponing this task because it would have taken me weeks to develop. But using Copilot is like having a new team member, so I used it to create an app that will ship in the next version of Hypersistence Optimizer. Instead of weeks, this task took just two days to implement.</p>
+
+
+
+<p><strong>What&rsquo;s your typical usage? Are you using GitHub Copilot as an IDE plugin or the GitHub Copilot app?</strong></p>
+
+
+
+<p>I use GitHub Copilot in IntelliJ IDEA because it&rsquo;s convenient to run while reviewing source code or during a debug session.</p>
+
+
+
+<p>It&rsquo;s very useful as a code assistant, and it helps me speed up both investigations and building prototypes for features that need validation.</p>
+
+
+
+<p>I still review the plans and the code that is generated by AI since their goal is to improve my productivity, not replace me entirely. While AI provides the right answer in many situations, there are still times when the response is not satisfactory and requires my intervention.</p>
+
+
+
+<p><strong>Can you share some tips and best practices? For example, which skills are you using?</strong></p>
+
+
+
+<p>I created my own skills so that whatever text Copilot generates looks like something I wrote by hand.</p>
+
+
+
+<p>This skill captures my voice from 65 of my published articles, so a draft comes back sounding like my blog instead of like a language model. This is really useful when generating documentation for this project, since it lets the LLM learn from 12 years of blogging and provide examples that follow the same principles, such as expressiveness, testability, and simplicity.</p>
+
+
+
+<p>Throughout my career as a software engineer, I&rsquo;ve learned that we spend far more time on code maintenance than on creating it. Therefore, because maintenance and stability are critical for existing products, I developed skills that help AI mimic existing code practices in accordance with the principle of least astonishment.</p>
+
+
+
+<p>One tip is to change the model type based on the type of operation. For thorough thinking, I use Opus with the 1 million context window and Extra High or Max reasoning. However, for simpler tasks, such as generating reports, release notes, or verifying documentation, I use lighter models that consume fewer tokens.</p>
+
+
+
+<h2>Patrick Baumgartner</h2>
+
+
+
+<p>GitHub profile: <a href="https://github.com/patbaumgartner">@patbaumgartner</a></p>
+
+
+
+<p><strong>Your work involves coaching teams. What is your approach?</strong></p>
+
+
+
+<p>A lot of my work happens while the normal business still has to keep running. You cannot stop everything for six months to &ldquo;transform.&rdquo; We usually start by solving immediate problems together, understand where the team currently stands, define where we want to go and how we will know that we are improving, and then move there step by step.</p>
+
+
+
+<p>Depending on the situation, that can mean Software Craft practices such as TDD, refactoring, continuous delivery and XP; architecture and modularisation with Spring Boot, Spring Modulith; Spring Security; optimising Java and Spring Boot applications for containers; or increasingly, agentic engineering.</p>
+
+
+
+<p>The important part for me is that I work <em>with</em> the team. We make decisions together. I don&rsquo;t want a team to become dependent on me. Ideally, after some time they no longer need me except perhaps as a sparring partner.</p>
+
+
+
+<p>And maybe that explains why I find this new generation of AI tools so interesting: I like working with people, learning, experimenting, and solving problems. AI gives us another very powerful tool for doing exactly that.</p>
+
+
+
+<p><strong>Can you share a good story about how GitHub Copilot has helped you recently?</strong></p>
+
+
+
+<p>There are actually three very different examples that changed how I think about working with GitHub Copilot.</p>
+
+
+
+<p><strong>Let&rsquo;s start with the first one.</strong></p>
+
+
+
+<p>One was a migration of around 900 teaching slides across 15 presentations from Reveal.js to Marp. These were not simple slides. Many contain code, animations, and even interactive examples where I can change JavaScript live while teaching. More importantly, the presentations had already been battle-tested with students. The flow worked. Losing one small piece could break the story I use in the classroom.</p>
+
+
+
+<p>Doing that migration manually would probably have taken me a week or more&mdash;and realistically, I might simply have avoided doing it because it was such tedious work.</p>
+
+
+
+<p>With Copilot, I approached it differently. We first analysed the existing material, defined the target, created a migration plan, established constraints, provided examples, and defined what had to remain intact. Then we worked from the big structural changes down into the details.</p>
+
+
+
+<p>The really important part was verification.</p>
+
+
+
+<p>We generated screenshots of the Reveal.js and Marp versions and compared them visually and algorithmically. We built a small application where I could run both slide decks next to each other to verify animations manually. We even compared the generated PDFs.</p>
+
+
+
+<p>That meant the agent did not just say, &ldquo;Migration complete.&rdquo; We had evidence.</p>
+
+
+
+<p>The entire migration took me roughly eight to ten hours. I still owned the content, the teaching intent, and every meaningful change. Copilot could fix a typo automatically, but if content, versions, dates or meaning changed, that was something we discussed.</p>
+
+
+
+<p>For me, that experience reinforced an important principle: <em>delegate execution, not responsibility.</em> I own the result.</p>
+
+
+
+<p><strong>Can you share the second example?</strong></p>
+
+
+
+<p>A second example came from building a terminal UI application with Tamboui. It initially worked perfectly in Linux under WSL, and I had completely forgotten that somebody might run it directly in Windows CMD or PowerShell.</p>
+
+
+
+<p>And then a real user did.</p>
+
+
+
+<p>They discovered that the Enter key was simply ignored in some forms. That is another principle I strongly believe in: ship software early, because you learn from how people actually use it.</p>
+
+
+
+<p>We used Copilot to turn that feedback into reproducible UI tests. On Linux, Copilot was navigating the application with tmux. Through working with it, I learned about psmux and could execute similar flows in PowerShell. We reproduced the problem, created a local fix, traced the real problem into Tamboui, and I submitted the upstream fix, which was merged.</p>
+
+
+
+<p>During this work, the test descriptions themselves became too large for the available context. So I asked Copilot to help me redesign the way the tests were represented. Instead of verbose tables containing identifiers, names and repeated descriptions, it proposed a much more compact arrow notation: step &rarr; step &rarr; input, with additional information only where it was critical.</p>
+
+
+
+<p>That surprised me. We were not just using AI to execute information; we were working together on <em>how information should be represented for execution</em>. It did not have to be maximally human-friendly. It had to preserve the semantics while being efficient for the agent.</p>
+
+
+
+<p><strong>How about the third example?</strong></p>
+
+
+
+<p>The third example is completely different again.</p>
+
+
+
+<p>Someone close to me needed to practise mathematics, and I thought: why don&rsquo;t we build a small learning app?</p>
+
+
+
+<p>It covers addition, subtraction, multiplication, division and division with remainder for grades one through four. But I did not want to build another simple quiz application. Together with Copilot, I researched learning approaches such as spaced repetition, immediate feedback, adaptive difficulty, motivation, cooperative learning and gamification without dark patterns.</p>
+
+
+
+<p>Interestingly, during that research Copilot challenged one of my original assumptions. I initially wanted the application to be generic for children everywhere. The research led us toward looking at the actual school curriculum instead. I realised that the order in which topics are introduced, the operations and number ranges differ enough that making it &ldquo;universal&rdquo; immediately was unnecessary.</p>
+
+
+
+<p>So we focused on Switzerland first and aligned the progression accordingly. Because Switzerland is multilingual, the application is available in German, French, Italian and English.</p>
+
+
+
+<p>It also has cooperative and competitive two-player modes, and when someone gets an answer wrong, the application explains one way to solve it and brings similar questions back through spaced repetition.</p>
+
+
+
+<p>I deliberately chose an architecture without a backend. There is no reason for me to collect children&rsquo;s personal data on a server, so the data stays on the device and the application can simply be hosted on GitHub Pages.</p>
+
+
+
+<p>What started as a small experiment is now being used and shared among friends. It accidentally became a little product.</p>
+
+
+
+<p>That experience showed me another side of Copilot: don&rsquo;t only use it to implement your solution. Use it as a sparring partner to <em>expand and challenge the solution space before you start building</em>.</p>
+
+
+
+<p><strong>How do you typically use Copilot?</strong></p>
+
+
+
+<p>I actually don&rsquo;t use the classic Copilot autocomplete experience anymore.</p>
+
+
+
+<p>My work has moved almost completely toward agentic workflows.</p>
+
+
+
+<p>I use VS Code when I need a tight visual feedback loop&mdash;when I want to look closely at documents, code, presentations or intermediate results and adapt the process as I go.</p>
+
+
+
+<p>For larger execution-oriented tasks, I often work with the coding agent from the terminal. There I am more comfortable delegating a piece of work, letting it execute, and then inspecting the complete result. The interface I choose depends mostly on the feedback loop I need.</p>
+
+
+
+<p>I also had a fascinating experience using the coding-agent workflow through GitHub while travelling to JavaLand. I had started exploring an idea for a Maven plugin that optimises which Spring Boot auto-configurations are loaded. During roughly a four-hour journey, I was steering the agent from my phone: giving it a task, reviewing what it had done, thinking about the next step, and sending the next instruction.</p>
+
+
+
+<p>By the time I arrived, I had a working Maven plugin, a CI pipeline, performance tests against a sample application, and reports that could demonstrate whether the optimisation actually worked.</p>
+
+
+
+<p>That was the first time I had worked that way, and I was amazed that it actually worked. I wasn&rsquo;t trying to write Java on my phone. I was <em>reviewing, deciding and steering while the agent executed</em>.</p>
+
+
+
+<p>I also use MCP servers when they give me useful capabilities or context. For example, I have used Context7 for documentation, integrations with my Logseq knowledge base, and I have experimented with an MCP integration for Adobe Premiere Pro.</p>
+
+
+
+<p>But I don&rsquo;t use MCP just because I can. If a good CLI exists, I often prefer the CLI because it feels more direct and faster to me.</p>
+
+
+
+<p>The agent is also not a &ldquo;junior developer&rdquo; in my mental model. I think of it much more as a sparring partner. But just like anyone joining a project, it first needs to be brought up to speed.</p>
+
+
+
+<p>Context is king.</p>
+
+
+
+<p><strong>Can you share some tips and best practices?</strong></p>
+
+
+
+<p>The biggest thing I would recommend is: <em>stop one-shot prompting.</em></p>
+
+
+
+<p>For anything non-trivial, I want to understand the problem before execution starts. Quite often I explicitly ask the agent to interview me first. The purpose of that interview is to uncover assumptions and expectations that are still implicit.</p>
+
+
+
+<p>A good agent can execute the wrong idea incredibly quickly. That does not make the detour cheaper.</p>
+
+
+
+<p>I experienced this myself while working on my Spring Boot auto-configuration optimiser. Initially I wanted to support both Spring Boot 3.5 and 4.x. There were architectural differences, so we implemented both approaches. Later I realised I no longer needed the 3.5 path and removing it was painful.</p>
+
+
+
+<p>The lesson was simple: <em>detours are expensive. Get the requirements right before you accelerate.</em></p>
+
+
+
+<p>Once the intent is clear, I want a plan. When I review that plan, four things matter especially to me: are assumptions visible, are verification gates defined, does the approach fit the architecture, and does it avoid unnecessary work?</p>
+
+
+
+<p>The second principle is to define <em>task-specific verification gates.</em></p>
+
+
+
+<p>&ldquo;Done&rdquo; should not mean that the model says it is done.</p>
+
+
+
+<p>For a refactoring, the gates might include passing tests, proving that all intended files were handled, updating documentation and leaving no TODOs behind. For the slide migration, the gates included screenshots, visual diffs, animations, PDF output and content completeness.</p>
+
+
+
+<p>The gates depend on the task. The principle does not: the agent should be able to provide evidence that the work satisfies the definition of done.</p>
+
+
+
+<p>I recently came across a skill called unlazy that follows a similar idea: create explicit gates, work through them deliberately, and prove that they have been completed rather than taking shortcuts.</p>
+
+
+
+<p>The third principle is to turn your lessons into <em>reusable skills</em>.</p>
+
+
+
+<p>I have started writing and maintaining my own Agent Skills. When I learn something from an execution&mdash;perhaps the agent misunderstood a convention, a useful check was missing, or I found a better way to approach a task&mdash;I update the skill.</p>
+
+
+
+<p>The next time I perform that task, the lesson is already there.</p>
+
+
+
+<p>One example is a skill I call maintainer-audit, inspired by work in the open agent skills community. I use it across my own repositories. It checks and, where appropriate, fixes the things I expect a maintained project to have: repository documentation, CI pipelines, Dependabot configuration, CodeQL, consistent cleanup and other project standards.</p>
+
+
+
+<p>The goal is not to generate another audit report for me to read. It brings the repository back toward the baseline I want automatically. That makes my projects more consistent and easier to maintain.</p>
+
+
+
+<p>I think of these skills as <em>living engineering knowledge</em> rather than static prompts.</p>
+
+
+
+<p>The fourth principle is to put deterministic engineering tools around the probabilistic model.</p>
+
+
+
+<p>I have my own quality harness that wraps tools such as Checkstyle, PMD and Spring Modulith architecture checks and produces a consolidated report that the agent can consume. I can run that from hooks and let the agent iterate:</p>
+
+
+
+<p>change &rarr; execute checks &rarr; read findings &rarr; fix &rarr; execute again.</p>
+
+
+
+<p>It continues until there are no findings left.</p>
+
+
+
+<p>That does not mean I stop looking at the software. I still run the application, interact with it and decide whether it behaves and looks the way I expect. Sometimes I deliberately implement feature by feature because the feedback loop is much tighter.</p>
+
+
+
+<p>I learned that asking for everything at once because &ldquo;the AI can do it&rdquo; is usually a bad idea. Large, generic specifications create large, generic implementations&mdash;and cleaning them up afterwards can be harder than building smaller increments correctly.</p>
+
+
+
+<p>More broadly, I think we developers need to talk much more about <em>how</em> we use these tools. Share the experiments that worked. Share the ones that didn&rsquo;t. Borrow ideas from each other and adapt them to your own context instead of looking for one universal AI development process.</p>
+
+
+
+<p>That is also why I like the idea of AI as a sparring partner. On a Friday night, when I want to experiment with something and no human pair is available, I suddenly have somebody&mdash;or something&mdash;I can challenge an idea with, review an approach with, or use as a very sophisticated rubber duck.</p>
+
+
+
+<p>But I still take those ideas back to real people. Human feedback, product understanding and real-world context remain essential.</p>
+
+
+
+<p><strong>How do you think AI is changing our profession?</strong></p>
+
+
+
+<p>I don&rsquo;t think software engineering students should primarily aspire to become code-producing machines. They need to become strong problem solvers. They need to understand users and stakeholders, discover the real problem behind a requirement, challenge assumptions, understand products and markets, make architectural trade-offs, think critically, work in a structured way and transfer useful solutions from one context into another.</p>
+
+
+
+<p>The model is extraordinarily good at generating possibilities and executing things. But as a human, I usually know much more of the actual context&mdash;including the things nobody ever documented.</p>
+
+
+
+<p>So I want to remain in charge of shaping the solution and let the agent take over more of the execution.</p>
+
+
+
+<p>In that sense, I think <em>AI is putting the engineering back into software engineering</em>.</p>
+
+
+
+<p>And I like that.</p>
+
+
+
+<h2>Frank Delporte</h2>
+
+
+
+<p>GitHub profile: <a href="https://github.com/FDelporte">@FDelporte</a></p>
+
+
+
+<p><strong>How did you get started in tech?</strong></p>
+
+
+
+<p>I&rsquo;ve been fascinated by computers since I got a Commodore 64 when I was 11. Took some side steps into video production and television work after school but turned back into coding as that video needed to be put on DVD and the very first websites&hellip; Yes, I&rsquo;m that old ;-).</p>
+
+
+
+<p><strong>How has GitHub Copilot helped you recently?</strong></p>
+
+
+
+<p>It&rsquo;s a perfect companion to evaluate pull requests and investigate bug reports.</p>
+
+
+
+<p>One remarkable story is about the <a href="https://www.pi4j.com/">Pi4J library</a> that lets you build Java applications to interact with electronic components on the Raspberry Pi. In February 2026, we released V4 which has a new plugin using the Foreign Function &amp; Memory API. We tested it thoroughly before releasing, but still, shortly after the release someone <a href="https://github.com/Pi4J/pi4j/issues/622">reported that using 5 input buttons doesn&rsquo;t work as expected</a>. Pushing one of the first four configured buttons triggers a code execution as expected, while nothing happens with the fifth button.</p>
+
+
+
+<p>This is the kind of report you don&rsquo;t want to get. Nothing was visibly broken. No exception, no warning in the logs, the fifth button was simply silent. And it got worse: with the older gpiod plugin, the exact same hardware and the exact same application, worked fine. So the problem was in our new FFM code, which sits on top of the Linux kernel&rsquo;s GPIO character device and talks to it through native calls. That is not the part of the codebase where you expect to find a quick answer.</p>
+
+
+
+<p>So I assigned the issue to the Copilot coding agent and gave it two file paths as a starting point, the provider class and FFMDigitalInput. About half an hour later there was a pull request, with an explanation I really did not expect.</p>
+
+
+
+<p>Each input runs an event watcher that blocks in a native poll() call, waiting for the kernel to report a change on its GPIO line. Those watchers ran in virtual threads. And a virtual thread that blocks inside a native call cannot be unmounted from its carrier thread. It stays pinned there for the whole duration of the call. A Raspberry Pi 4 has four cores, so the virtual thread scheduler has four carrier threads. Register four inputs, and all four carriers are parked in poll() forever. The fifth watcher is created, but is never scheduled. That is exactly the bug that was reported. Not &ldquo;events are flaky&rdquo;, but &ldquo;the fifth one does nothing.&rdquo;</p>
+
+
+
+<p>What I liked most was not the diff, it was the conversation that followed in the review. I left a comment asking Copilot to explain this in more detail:</p>
+
+
+
+<p><em>I thought the goal of virtual threads was exactly to step away from the platform thread limit? So how is this a problem that four virtual threads block the four threads on a four-core processor like the Raspberry Pi?</em></p>
+
+
+
+<p>Check the <a href="https://github.com/Pi4J/pi4j/pull/623">pull request for the full conversation</a>. Copilot was able to link the use of the Raspberry Pi which has four CPU cores with the reported problem. It was able to propose a simple fix for the problem, plus some extra improvements it found during its investigation.</p>
+
+
+
+<p><strong>Can you share some tips and best practices?</strong></p>
+
+
+
+<ul>
+<li><strong>Tell it where to look:</strong> For the Pi4J issue #622, I added two file paths. That is a tiny bit of effort that removes a huge amount of searching in a large codebase. You usually have a hunch about the neighbourhood even when you have no idea about the bug. Give it to the tool so it doesn&rsquo;t need to investigate the complete code.</li>
+
+
+
+<li><strong>Ask for proof and tests:</strong> &ldquo;Add a unit test to validate the change&rdquo; is something I ask a lot these days. Well, asked, because it has now become a rule in my instructions file. It also prevents cases where the diagnosis was wrong, because the test won&rsquo;t fail on the old code.</li>
+
+
+
+<li><strong>Ask why:</strong> If you don&rsquo;t understand a fix, say so and ask. The explanation is a deliverable too and should be added into your project documentation or inside the ticket or pull request. It teaches everyone who reads the info later. For example, this also triggered more questions within the Pi4J team about virtual thread pinning on native calls.</li>
+
+
+
+<li><strong>Stay in control:</strong> All of these pull requests in Pi4J were reviewed and approved by maintainers before they went in. That&rsquo;s the model that works best in this project: the agent does the investigation, the humans stay responsible for what ships. But also for my other projects I always do a review of the code that was generated by the tool. I always want to keep code readable and maintainable. Too often, a tool creates duplicate methods or recreates something which is already available in another place and should be combined. That&rsquo;s your responsibility. You can go very fast these days with AI-assisted coding, which also means you can very fast create a mess. Don&rsquo;t do that, keep your code manageable, your colleagues and future-self will thank you if they have to investigate bugs or make improvements later.</li>
+</ul>
+
+
+
+
+
+<p><a href="https://github.com/features/copilot">Get started with GitHub Copilot &gt;</a></p>
+
+
+<p>The post <a href="https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/">How 3 Java Champions are using GitHub Copilot for increased productivity</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p></div>
+</article>
+<article class="article-card" id="artikel-987">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Aspect analysis: Leipzig never found a trigger – LC", "image": [], "datePublished": "2026-10-20T16:00:07+00:00", "dateModified": "2026-10-20T16:00:07+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-987"}</script>
+    <h2>Aspect analysis: Leipzig never found a trigger – LC</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Sports</strong> &nbsp;|&nbsp;
+        <a href="https://spielverlagerung.com/2026/10/20/aspect-analysis-leipzig-never-found-a-trigger-lc/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><p>A 6-1 reads like a game in which everything fell apart. Look at how the goals came about one by one and a different picture emerges: it was not six separate problems but two or three, which Bayern punished in seven variations. No pressure on the man in possession, marking problems in central areas, and a back line that did not work with the movements in front of it – that chain runs through practically every goal conceded.</p>
+<p><span></span></p>
+<p>This aspect analysis therefore takes the goals rather than the game as its material and works back from there to the patterns.</p>
+<p><a href="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Gegenuberstellung.png"><img alt="" src="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Gegenuberstellung.png"></a></p>
+<h3>Pressing and build-up: where Leipzig lost access</h3>
+<p>Bayern triggered very high throughout, stayed tight to their opponents and pushed through centrally without hesitation. Vandevoordt was pressed from Bayern’s right, with the clear intention of keeping him away from the left-hand build-up route and forcing the long ball. Leipzig’s front line of Nusa and Brajan Gruda repeatedly angled their runs deep against Nathaniel Brown and Konrad Laimer.</p>
+<p><a href="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Pressing-Bayern.png"><img alt="" src="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Pressing-Bayern.png"></a></p>
+<p>Bayern had one extra central player dropping into midfield in this phase, usually Kimmich. Had Leipzig played short to the right, he could have pressed through onto Raum; in practice he stayed central and pushed through from there. That left Leipzig with the long ball, and it was ineffective: it produced almost no regains, so the enforced forward play brought neither relief nor territory.</p>
+<p>Going the other way, Leipzig got no access at all, and the reason was Bayern’s rotations. Kimmich dropped right, Pavlović left into a back three, with Upamecano holding a very wide position. Against this shifting three-man build-up Leipzig never found a trigger, because the assignments reset with every rotation – whoever was supposed to step out of midfield first had to work out who he was picking up. The handover of pressing duties out of central areas failed repeatedly.</p>
+<p>In front of that, Bayern staggered their shape so that Leipzig’s compactness became the problem. Olise moved into the ten space at times, Nathaniel Brown operated in the half-lane and ran beyond from there, Luis Díaz stayed wide left. Saibari and Kane pinned several opponents centrally while regularly pulling out of the central lane. Because Leipzig pressed very narrow, this produced exactly what Bayern were looking for: once the opponent was committed near the ball, the switch followed, and on the now open side stood a one-on-one.</p>
+<p><a href="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Verlagerungen.png"><img alt="" src="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Verlagerungen.png"></a></p>
+<p>That already builds the bridge to the goals. The isolated one-on-ones in which Luis Díaz got his three finishes were not individual moments but the product of this sequence of pinning and switching.</p>
+<h3>The goals</h3>
+<p><strong>1-0, Luis Díaz (12.)</strong> – The first goal already contains the full diagnosis. Kimmich receives centrally without any pressure and can turn out with an open body shape. Ahead of him Saibari and Kane occupy the central zone in front of the box, which forces Orban and Lukeba to step out – so far, the intended part. The full-backs, however, do not push up with that movement and stay too deep, while Raum’s position plays the runner onside. Klostermann stays outside and leaves the inside lane unsecured, and that is exactly where Luis Díaz starts from. Out of that unprotected lane Díaz runs into the back line and Kimmich chips the ball in behind. Not one bad decision, but four players whose decisions did not fit together.</p>
+<p><a href="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-1-0.png"><img alt="" src="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-1-0.png"></a></p>
+<p><strong>2-0, Aleksandar Pavlović (26.)</strong> – Same cause, different route. Kane drops deep and Leipzig do not shift across as a unit – the reactions showed it clearly: arms thrown up, gesturing, hands dropping again, the beginnings of frustration. Kane gets the free body shape, and with him the consequence is predictable: the long ball, high or flat. Because Leipzig are so narrow centrally, the ball flies straight through the entire zone in front of their back line. Luis Díaz moves actively into the passing lane to control it while Klostermann tries to get into his running line and does not make it – Díaz reaches the ball first. From the one-on-one he wins, Díaz dribbles centrally at Orban, which creates a four-against-three on the break. Díaz pins Orban and Lukeba centrally, Pavlović overlaps on the left after holding a high, left-leaning position all evening and threatening the back line. Two touches, left foot, finished away from the defender.</p>
+<p><a href="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-2-0.png"><img alt="" src="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-2-0.png"></a></p>
+<p><strong>3-0, Michael Olise (34.)</strong> – Here Bayern’s press shows itself at its clearest. From a Leipzig throw-in, the man-orientation is fully visible: consistent pushing through, clean handovers. A misplaced pass from Raum then cannot be defended, because neither the tracking nor the duelling is good enough to disturb the pass. Kane can open up half-way. Centrally, Olise comes inside from the wing, and Banzuzi and his partner fail to pick him up, letting him run through – against a player of that variability, an invitation to the key pass. Luis Díaz runs beyond and drags Orban with him, Klostermann is pinned wide by Saibari and can no longer get back into central areas. Olise finishes against the goalkeeper’s movement, across his standing leg into the far corner, catching Vandevoordt completely on the wrong foot.</p>
+<p><a href="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-3-0.png"><img alt="" src="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-3-0.png"></a></p>
+<p><strong>4-0, Luis Díaz (47.)</strong> – After a regain, Bayern switch quickly to the far side and once diagonally through, putting Díaz in a one-on-one again. He holds the ball in the dribble, and Leipzig fail to solve the situation in three steps: the centre is not closed, Orban is too late stepping out, Klostermann does not get into the duel. That Vandevoordt leaves the far corner open is the final piece of an isolated one-on-one that should never have arisen.</p>
+<p><a href="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-4-0.png"><img alt="" src="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-4-0.png"></a></p>
+<p><strong>5-0, Harry Kane (53.)</strong> – Structurally the most interesting goal. Leipzig play a long ball without preparing it and react to the consequences contradictorily: the back line does not push up at all, while the midfield line and both forwards counterpress forwards. The ten space opens up enormously, the gaps between the lines become huge – and Olise is standing in that zone. One pass from Kim is enough to take six Leipzig players out of the game. Olise runs unopposed at the back line and lays it off to Díaz, who is in a one-on-one again; Brown joins for the two-against-one and shifts into the inside lane. Klostermann does not pick up his run from the deep half-space, and centrally Kane again drops into Orban’s blind side – a pattern that stood out across the whole game. The result is a two-against-one against the goalkeeper.</p>
+<p><a href="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-5-0.png"><img alt="" src="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-5-0.png"></a></p>
+<p><a href="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-5-0-II.png"><img alt="" src="https://spielverlagerung.com/wp-content/uploads/sites/2/2026/10/Entstehung-5-0-II.png"></a></p>
+<p><strong>6-0, Luis Díaz (69.)</strong> – From a set piece Bayern create a five-against-four out wide. Gnabry pins opponents and makes the space for Díaz, Orban again takes one big step in the block and does not get into the duel. The same scene as the 4-0, only from a different phase of play – a sign that this is a behavioural pattern rather than a snapshot.</p>
+<p><strong>6-1, Andrija Maksimović (90.+1)</strong> – Leipzig’s goal shows in reverse what their own game had been missing. Bayern drop into a deeper block here, and Leipzig combine centrally before going wide. Gruda gets into a one-on-one against Brown, Upamecano steps across – but from above, with too wide a gap and without closing the centre. That opens the one-two, which Leipzig take immediately. Because the whole situation narrows onto that combination, the space behind it stays unoccupied, and Maksimović can take two touches on his left and finish unopposed.</p>
+<h3>What remains</h3>
+<p>The sequence of goals reads like a repetition. Five of Bayern’s six come from the same combination of no pressure on the ball centrally and a back line that does not manage the space behind it. Luis Díaz stands in an isolated one-on-one three times, Orban is twice too late with a step that is too big, Kane repeatedly drops into his blind side. Klostermann certainly did not have his best day – but it would be too easy to settle the bill with him. In the decisive scenes he faced situations that functioning protection in front of him should never have allowed to arise in the first place.</p>
+<p>Behind it all lies not an individual problem but a structural one: Leipzig pressed narrow and found no trigger against Bayern’s rotating back three. That very compactness made the switch of play the opponent’s most effective tool, and at the end of every switch stood a one-on-one that Leipzig lost. The scoreline is not the story – the story is that the same scene worked six times.</p>
+<p><em>LC is often found in a classroom, happiest on a football pitch, and occasionally on LinkedIn.</em></p></div>
+</article>
+<article class="article-card" id="artikel-3467">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "You’re Not Rich — And Neither Am I", "image": ["https://www.physicianonfire.com/wp-content/uploads/2026/10/b8e9cfbe-8b40-4113-bb1e-474f8a06ed40-1024x578.png"], "datePublished": "2026-10-20T15:22:12+00:00", "dateModified": "2026-10-20T15:22:12+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-3467"}</script>
+    
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.physicianonfire.com/wealth-comparison-physicians/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://www.physicianonfire.com/wp-content/uploads/2026/10/b8e9cfbe-8b40-4113-bb1e-474f8a06ed40-1024x578.png" alt="You’re Not Rich — And Neither Am I" loading="lazy"><img alt="" src="https://www.physicianonfire.com/wp-content/uploads/2026/10/b8e9cfbe-8b40-4113-bb1e-474f8a06ed40-1024x578.png">Warren Buffett has spent decades telling anyone who&#8217;ll listen that he lives simply. Same house in Omaha he bought in ... <a href="https://www.physicianonfire.com/wealth-comparison-physicians/" title="You’re Not Rich — And Neither Am I">Read more</a></div>
+</article>
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+<article class="article-card" id="artikel-3079">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Maryland Man Convicted of $18.7 Million Medicare Fraud for Respiratory Testing Scheme Targeting Nursing Homes", "image": [], "datePublished": "2026-10-20T14:30:00+00:00", "dateModified": "2026-10-20T14:30:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-3079"}</script>
+    <h2>Maryland Man Convicted of $18.7 Million Medicare Fraud for Respiratory Testing Scheme Targeting Nursing Homes</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.fbi.gov/news/press-releases/maryland-man-convicted-of-187m-medicare-fraud-for-respiratory-testing-scheme-targeting-nursing-homes" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">A federal jury in the District of Maryland convicted a laboratory owner for taking advantage of nursing homes that needed COVID-19 tests.</div>
+</article>
+<article class="article-card" id="artikel-2877">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Glassdoor’s president shares why job searching is broken and how to fix it", "image": ["https://blog.glassdoor.com/site-us/wp-content/uploads/sites/2/2026/10/2026_Glassdoor-Recruiter-Blog-Posts-Hero-Images-GD-Recruiter-announcement-post_1942x1297.png?w=240"], "datePublished": "2026-10-20T12:10:24+00:00", "dateModified": "2026-10-20T12:10:24+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-2877"}</script>
+    <h2>Glassdoor’s president shares why job searching is broken and how to fix it</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.glassdoor.com/blog/job-search-broken-glassdoor-president-owen-humphries/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://blog.glassdoor.com/site-us/wp-content/uploads/sites/2/2026/10/2026_Glassdoor-Recruiter-Blog-Posts-Hero-Images-GD-Recruiter-announcement-post_1942x1297.png?w=240" alt="Glassdoor’s president shares why job searching is broken and how to fix it" loading="lazy">Glassdoor President Owen Humphries explains why the modern job search feels broken and how new matching tools are changing hiring.</div>
+</article>
+<article class="article-card" id="artikel-3080">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Justice Department Announces Results from Operation Not Forgotten 2026", "image": [], "datePublished": "2026-10-20T10:38:00+00:00", "dateModified": "2026-10-20T10:38:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-3080"}</script>
+    <h2>Justice Department Announces Results from Operation Not Forgotten 2026</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.fbi.gov/news/press-releases/justice-department-announces-results-from-operation-not-forgotten-2026" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">The Department of Justice and FBI announced results of the personnel surge in support of Operation Not Forgotten 2026, which focuses on unresolved cases in Indian country with a priority on cases involving violence against women and children, including those who are missing or murdered.</div>
+</article>
+<article class="article-card" id="artikel-3795">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Embracing Playful Imperfection With The CSS `random()` Function", "image": ["http://files.smashing.media/articles/embracing-playful-imperfection-css-random-function/embracing-playful-imperfection-css-random-function.jpg"], "datePublished": "2026-10-20T10:00:00+00:00", "dateModified": "2026-10-20T10:00:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-3795"}</script>
+    <h2>Embracing Playful Imperfection With The CSS `random()` Function</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp;
+        <a href="https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="http://files.smashing.media/articles/embracing-playful-imperfection-css-random-function/embracing-playful-imperfection-css-random-function.jpg" alt="Embracing Playful Imperfection With The CSS `random()` Function" loading="lazy"><p>In design, we love spending hours obsessing over consistency, grids, and alignment. But when I heard that the native <strong>CSS random() function</strong> landed in Safari and is rolling out in Chrome 156, I started wondering: where does <strong>randomness</strong> actually make sense on the web? Is it something we want in our design system? To find out, I did what I always do in doubt: I built a bunch of playful CodePen demos exploring organic typography, bouncing letters, splayed cards, and a punk fanzine.</p>
+<p>As someone who loves building design systems and tinkering with CSS architecture, a big part of my day job revolves around control. We set up spacing scales, lock down typography, set up color tokens, and make sure everything aligns on a grid. <strong>Consistency</strong> is usually our bread and butter as design engineers and a proud badge of skill when creating design systems. If a card suddenly jumps 20 pixels to the left on a refresh, it’s not creative expression; it’s a bug that the project manager will log.</p>
+<p>So when I first heard that the native random() function from the CSS Values and Units Level 5 spec was shipped in Safari, and is currently rolling out in Chrome 156 (with positive signals from Mozilla on Firefox as well), my first reaction was: <em>that’s pretty cool!</em></p>
+<p>And my second reaction was: <em>wait... where would I actually use this without making a mess? How can I convince designers that random might be a good idea for a design system?</em></p>
+<p>Because let’s be honest: why on earth would we want randomness in our stylesheets when we’ve spent the last decade trying to make the web more predictable? Even when using flexbox or fluid typography, we’re still trying to make things as aligned and uniform as possible.</p>
+The Charm Of Things Not Being 100% Straight
+<p>If you step away from the browser for a second and look at physical things around you, nothing is ever truly uniform.</p>
+<p>Take an old letterpress print: the ink bleeds slightly into the paper grain, some letters have a microscopic tilt, and the baseline isn’t always that straight. Or think about a deck of Polaroid photos dropped on a coffee table; those photos aren’t perfect, probably not straight either. Or what about lights flickering in a street at night? That little bit of analog messiness is what makes things feel <strong>alive</strong>, <strong>organic</strong>, and <strong>human</strong>.</p>
+<p>On the web, we’ve gotten so good at pixel perfection that sometimes our interfaces end up feeling a bit sterile. We notice this even more now with rapidly created designs by an unguided LLM; we usually end up with the same sort of design we had 10 years ago. Everything is squared off, aligned, neat. It works, but frankly, it does get a bit boring.</p>
+<p>Randomness in CSS doesn’t have to mean throwing your design system out the window. It’s about little imperfections and playfulness. Maybe let’s even call it fun.</p>
+<p>To see what this actually looks like in practice, I spent a few hours tinkering in CodePen. The demos might feel a bit isolated, but I’m sure that many designers could make the best of this <strong>controlled chaos</strong>. But before we look at those demos, let’s take a look at the syntax.</p>
+How The CSS random() Function Works
+<p>The random() function is specified in <a href="https://drafts.csswg.org/css-values-5/#random">CSS Values and Units Module Level 5</a>. It generates a pseudo-random value inside your CSS without needing JavaScript or a build-time Sass loop.</p>
+<p>The formal specification looks like this:</p>
+
+random( &lt;random-key&gt;?, &lt;min&gt;, &lt;max&gt;, &lt;step&gt;? )
+
+<p>In practice, and across current browser implementations, you can just write comma-separated arguments:</p>
+
+/* Random angle between -3deg and 3deg */
+rotate: random(-3deg, 3deg);
+
+/* Random width between 20px and 80px in steps of 10px */
+inline-size: random(20px, 80px, 10px);
+
+/* Random animation duration */
+animation-duration: random(1.5s, 3s, 0.2s);
+
+
+<h3>Matching Units</h3>
+<p>It won’t be a shocker for most people, but I thought I should at least mention that <strong>your minimum and maximum bounds must share the exact same unit type</strong>.</p>
+<p>The CSS parser needs to know what dimension it’s dealing with. You can use lengths, angles, time, percentages, or plain unitless numbers:</p>
+
+/* Good: both are angles */
+rotate: random(-4deg, 4deg);
+
+/* Good: both are unitless numbers */
+opacity: random(0.3, 1);
+
+/* Nope! You cannot mix units */
+inline-size: random(2rem, 100px); /* Invalid */
+
+
+<p>If you ever need to combine units, you’ll have to reach for calc() inside the arguments so each side resolves properly.</p>
+<h3>Stepping And Rounding</h3>
+<p>The optional third argument is the step size. If you don’t add it, the browser picks from a continuous range. But if you provide a step, it rounds the random value to discrete increments:</p>
+
+/* Only produces 0px, 15px, 30px, 45px, or 60px */
+top: random(0px, 60px, 15px);
+
+
+<p>This can be helpful in cases where you want things to jump around a bit, but you still want them to land on your pre-defined grid.</p>
+<h3>Caching Keys: Keeping Things In Sync</h3>
+<p>Normally, every time random() is evaluated on a property, it creates an independent random value. But there could be an example where you create a box that sets inline-size and block-size at random, but at the same time you need them to match so the element stays a perfect square.</p>
+<p>That’s where the <strong>caching key</strong> comes in:</p>
+
+.card-thumbnail {
+  /* Both properties share the key --square-size */
+  inline-size: random(--square-size element-scoped, 60px, 120px);
+  block-size: random(--square-size element-scoped, 60px, 120px);
+}
+
+
+<p>In the latest spec, a bare dashed ident like --square-size shares its seed globally across every element in the document (which would make all cards identical). To keep width and height linked on a single element while giving each card its own independent size, the spec requires pairing it with the element-scoped keyword (e.g. --square-size element-scoped).</p>
+<p>To see this in action, I created a little example. In the top row, the tiles have uncached dimensions, which distorts each tile into an unpredictable, mismatched rectangle. In the bottom row, both inline-size and block-size share --square-size, guaranteeing that each tile remains a pristine 1:1 square. Refresh the CodePen a couple of times and notice the bottom cards keeping the same randomness:</p>
+<p>See the Pen <a href="https://codepen.io/editor/smashingmag/pen/01a15e91-4bac-765e-b04e-a53636759163">Uncached vs cached random() [forked]</a> by <a href="https://codepen.io/utilitybend">@utilitybend</a>.</p>
+
+
+
+/* Uncached: width and height resolve independently, creating random rectangles */
+.tile-uncached {
+  inline-size: random(4.2rem, 8.5rem);
+  block-size: random(4.2rem, 8.5rem);
+  rotate: random(-3.5deg, 3.5deg);
+}
+
+/* Cached: shared key guarantees a clean 1:1 square */
+.tile-cached {
+  inline-size: random(--square-size element-scoped, 4.2rem, 8.5rem);
+  block-size: random(--square-size element-scoped, 4.2rem, 8.5rem);
+  rotate: random(--tilt element-scoped, -3.5deg, 3.5deg);
+}
+
+
+
+Browser Support And Progressive Enhancement
+<p>Where can you test this today?</p>
+<ul>
+<li><strong>WebKit / Safari</strong>: Safari was the first to land support.</li>
+<li><strong>Chrome / Edge</strong>: Shipped and rolling out right now with <strong>Chrome 156</strong>.</li>
+<li><strong>Firefox</strong>: Positive signals on the standards track, so hopefully won’t be too far behind.</li>
+</ul>
+<p>Because we’re still in the rollout phase, you’ll want to wrap your experiments in @supports:</p>
+
+/* Baseline for all browsers */
+.badge {
+  rotate: 0deg;
+}
+
+/* Enhanced for browsers with random() */
+@supports (rotate: random(-2deg, 2deg)) {
+  .badge {
+    rotate: random(-2.5deg, 2.5deg);
+  }
+}
+
+
+<h3>The Future random-item Function</h3>
+<p>There’s also another function in the spec called random-item(). While random() handles numerical ranges, random-item() lets you pick from a list of predefined tokens or keywords:</p>
+
+
+
+/* Picking a random color from your palette */
+background-color: random-item(--seed, oklch(75% 0.18 150), oklch(65% 0.22 350), oklch(85% 0.16 85));
+
+
+
+<p>This can be handy to randomise from a set of design tokens. This one does not have any browser support at the moment, but it certainly is something to look forward to.</p>
+<p>And now for the practical part.</p>
+Demo 1: Let’s Just Randomize Letters
+<p>When I started playing with the feature, I was also doing some typography tricks with animations. So that’s where my first thought went: Typography! <em>What if we just add a tiny bit of imperfection to a word?</em></p>
+<p>Think of vintage book covers. The letters aren’t misaligned by miles, but they have small imperfections.</p>
+<p>See the Pen <a href="https://codepen.io/editor/smashingmag/pen/01a15e92-157f-708d-a704-fa067114aaca">Imperfection random() [forked]</a> by <a href="https://codepen.io/utilitybend">@utilitybend</a>.</p>
+<p>Here is the CSS powering the letters:</p>
+
+@layer demo {
+  .char {
+    display: inline-block;
+
+    /* A tiny tilt */
+    rotate: random(-2.8deg, 2.8deg);
+
+    /* A micro nudge on X and Y */
+    translate: random(-1.5px, 1.5px) random(-2.8px, 2.8px);
+
+    /* Very subtle ink variance */
+    opacity: random(0.8, 1, 0.02);
+
+    transition-property: rotate, translate, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* Snap straight on hover */
+  .word:hover .char {
+    rotate: 0deg;
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+
+<p>I also added a little hover effect. While you’re reading, the word feels playful. But the second you hover over it, every character snaps back.</p>
+<h3>Please Don’t Break The Screen Reader</h3>
+<p>One quick <strong>accessibility warning</strong> here: If you break a word into separate &lt;span&gt; elements so you can style each letter, screen readers will often read it out as individual characters: “i - m - p - e - r - f - e - c - t - i - o - n”, or pause awkwardly between each one. That’s a terrible user experience.</p>
+<p>Always hide the visual spans from assistive tech and provide the full word:</p>
+
+&lt;h1 class="word" aria-label="Imperfection"&gt;
+  &lt;span class="word-inner" aria-hidden="true"&gt;
+    &lt;span class="char"&gt;i&lt;/span&gt;
+    &lt;span class="char"&gt;m&lt;/span&gt;
+    &lt;span class="char"&gt;p&lt;/span&gt;
+    &lt;span class="char"&gt;e&lt;/span&gt;
+    &lt;span class="char"&gt;r&lt;/span&gt;
+    &lt;span class="char"&gt;f&lt;/span&gt;
+    &lt;span class="char"&gt;e&lt;/span&gt;
+    &lt;span class="char"&gt;c&lt;/span&gt;
+    &lt;span class="char"&gt;t&lt;/span&gt;
+    &lt;span class="char"&gt;i&lt;/span&gt;
+    &lt;span class="char"&gt;o&lt;/span&gt;
+    &lt;span class="char"&gt;n&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/h1&gt;
+
+
+<p>Screen reader users get the clean text, and sighted users get the fun visual quirks.</p>
+Demo 2: Animating The Letters: Pure Procedural Bounce
+<p>Once I had those letters sitting there with their little tilts, I couldn’t resist: <em>what if we animated it?</em></p>
+<p>I started tinkering with a bounce keyframe. I was just goofing around, but the end result gave me a little smile. If you animate every letter with the exact same timing, you get that clean sine wave we’ve all seen before. But if every letter gets its own jump height, its own duration, and its own landing squash, suddenly the word looks like a bunch of little characters jumping around on a trampoline.</p>
+<p>See the Pen <a href="https://codepen.io/editor/smashingmag/pen/01a15e92-c117-729f-9844-ddf19fc1fc96">Bouncy imperfection with CSS random() [forked]</a> by <a href="https://codepen.io/utilitybend">@utilitybend</a>.</p>
+<p>Here is how the bounce parameters are wired up:</p>
+
+
+
+@layer demo {
+  .char {
+    display: inline-block;
+    transform-origin: center bottom;
+
+    /* Procedural bounce variables */
+    --jump: random(element-scoped, -35px, -55px, 2px);
+    --tilt: random(element-scoped, -8deg, 8deg, 0.5deg);
+    --dur: random(element-scoped, 1s, 1.2s, 0.1s);
+    --delay: random(element-scoped, -3s, 0s, 0.1s);
+    --rebound-squash: random(element-scoped, 1.08, 1.18, 0.02);
+
+    animation: letter-bounce var(--dur) linear var(--delay) infinite;
+  }
+
+  @keyframes letter-bounce {
+    /* apex */
+    0% {
+      translate: 0 var(--jump);
+      rotate: var(--tilt);
+      scale: 1 1;
+      animation-timing-function: cubic-bezier(0.65, 0.05, 0.85, 0.35);
+    }
+
+    /* touchdown */
+    44% {
+      translate: 0 0;
+      rotate: calc(var(--tilt) * 0.2);
+      scale: 0.96 1.05;
+      animation-timing-function: ease-out;
+    }
+
+    /* squash */
+    52% {
+      translate: 0 0;
+      rotate: 0deg;
+      scale: var(--rebound-squash) calc(2 - var(--rebound-squash));
+      animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    /* back up */
+    62% {
+      translate: 0 calc(var(--jump) * 0.2);
+      rotate: calc(var(--tilt) * -0.4);
+      scale: 0.98 1.03;
+      animation-timing-function: cubic-bezier(0.15, 0.85, 0.35, 1);
+    }
+
+    100% {
+      translate: 0 var(--jump);
+      rotate: var(--tilt);
+      scale: 1 1;
+    }
+  }
+}
+
+
+
+<p>Notice the negative animation delay (--delay: random(-3s, 0s)).</p>
+<p>If you set a positive delay, the letters sit frozen on page load, waiting for their timers to expire before jumping. By using a negative delay, the browser pretends the animation has already been running for a few seconds. The moment the page loads, every letter is already bouncing at its own rhythm.</p>
+Demo 3: Tilting Cards And Dynamic Shadows
+<p>We’ve built cards. Lots of cards. So many cards... Portfolio grids, blog summaries, feature lists. And most of the time, they sit in three or four neat, boring columns.</p>
+<p>For dashboards, that’s exactly what you want. But if you’re building a lifestyle portfolio, a children’s website, or a collection of vacation photos, we can be a bit more playful. In the following example, I did just that:</p>
+<p>See the Pen <a href="https://codepen.io/editor/smashingmag/pen/01a15e93-849d-72a9-9254-3f4305e58a34">Random card tilt [forked]</a> by <a href="https://codepen.io/utilitybend">@utilitybend</a>.</p>
+<p>Here’s how I put that together:</p>
+
+@layer demo {
+  .card {
+    /* A gentle random tilt and vertical shift */
+    --tilt: random(-3.5deg, 3.5deg);
+    --shift-y: random(-6px, 6px);
+
+    rotate: var(--tilt);
+    translate: 0 var(--shift-y);
+
+    /* Shadow follows the tilt angle! */
+    box-shadow:
+      calc(var(--tilt) * 1.5)
+      calc(10px + abs(var(--tilt) * 1px))
+      28px
+      oklch(20% 0.02 260 / 0.07);
+
+    transition:
+      rotate 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+      translate 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 0.4s ease;
+
+    /* Straighten up on hover or keyboard focus */
+    &amp;:hover,
+    &amp;:has(.button:focus-visible) {
+      rotate: 0deg;
+      translate: 0 -10px;
+      z-index: 10;
+      box-shadow:
+        0 20px 44px oklch(20% 0.02 260 / 0.12),
+        0 2px 6px oklch(20% 0.02 260 / 0.04);
+    }
+  }
+}
+
+
+<p>In the example, playing around with the shadow was a fun experiment. I will probably try more effects with that in the future.</p>
+Demo 4: The Splayed Deck With sibling-index And scroll
+<p>Here is where modern CSS features start getting really interesting. In the previous demo with tilting cards, we used pure randomness. But what if you have a stack of cards that needs to fan out across the screen as you scroll?</p>
+<p>In this example, I decided to use <strong>math for the structure</strong> and <strong>randomness for the human imperfection</strong>.</p>
+<p>See the Pen <a href="https://codepen.io/editor/smashingmag/pen/01a15e94-79c6-70b1-97d4-66b7c2d736b0">Scroll drivin animations with random() tilted cards [forked]</a> by <a href="https://codepen.io/utilitybend">@utilitybend</a>.</p>
+<p>Here is the setup:</p>
+
+
+
+@layer demo {
+  .deck-card {
+    position: absolute;
+
+    /* Mathematical fan base via sibling-index() (centered around middle card) */
+    --elevation: sibling-index();
+    --base-rot: calc((sibling-index() - (sibling-count() + 1) / 2) * 12deg);
+    --base-x: calc((sibling-index() - (sibling-count() + 1) / 2) * 60px);
+
+    --jitter-rot: random(-3.5deg, 3.5deg);
+    --jitter-y: random(-12px, 12px);
+    --jitter-x: random(-8px, 8px);
+
+    transform-origin: center 130%;
+
+    /* SDA */
+    animation: splay-fan linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0% 80%;
+
+    transition: scale 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    &amp;:hover {
+      scale: 1.05;
+      /* Hovered item on top */
+      z-index: calc(sibling-count() + 1);     }
+  }
+
+  @keyframes splay-fan {
+    from {
+      rotate: 0deg;
+      translate: 0 0;
+      box-shadow:
+        0 1px 3px oklch(20% 0.02 260 / 0.1),
+        0 2px 8px oklch(20% 0.02 260 / 0.07);
+    }
+    to {
+      rotate: calc(var(--base-rot) + var(--jitter-rot));
+      translate: calc(var(--base-x) + var(--jitter-x)) var(--jitter-y);
+      /* Splayed:
+          1. Sharp inter-card contact edge shadow
+          2. Elevated atmospheric shadow scaled realistically by sibling-index() */
+      box-shadow:
+        0
+        calc(1px + var(--elevation) * 0.6px)
+        4px
+        oklch(20% 0.02 260 / 0.1),
+        calc(var(--base-x) * 0.15)
+        calc(10px + var(--elevation) * 5px)
+        calc(18px + var(--elevation) * 7px)
+        oklch(20% 0.02 260 / 0.13);
+    }
+  }
+}
+
+
+
+<p>Look at how cleanly this works:</p>
+<ul>
+<li>sibling-index() calculates the mathematical fan so cards spread out evenly around the center card, and scales --elevation so cards higher in the stack cast wider shadows.</li>
+<li>calc((sibling-index() - (sibling-count() + 1) / 2) * 12deg); makes sure the amount of cards doesn’t matter; they each will rotate the same 12deg amount.</li>
+<li>random() adds the slight wobble you'd get if a person dealt the cards by hand.</li>
+<li>animation-timeline: scroll(root) ties the entire fan and shadow transition to the scrollbar.</li>
+</ul>
+Demo 5: Random Velocity
+<p>If you’ve ever looked at brutalist or high-end fashion websites, you’ve probably seen horizontal marquee text drifting across the screen as you scroll down the page.</p>
+<p>Usually, you see developers creating classes like .drift-slow, .drift-fast, .drift-reverse, or using a hefty JavaScript scroll listener to compute transforms.</p>
+<p>With random() and a tiny bit of math, we can get procedural drift speeds in just a few lines:</p>
+<p>See the Pen <a href="https://codepen.io/editor/smashingmag/pen/01a15e95-4cbe-77bd-9128-685d2c75cc56">Random() velocity scroll animation [forked]</a> by <a href="https://codepen.io/utilitybend">@utilitybend</a>.</p>
+<p>Here is the CSS:</p>
+
+@layer demo {
+  .drift-line {
+    white-space: nowrap;
+
+    /* Alternate direction between rows using math parity */
+    --direction: calc(pow(-1, sibling-index()));
+
+    /* Velocity distance */
+    --travel: random(15%, 44%);
+
+    /* Tied to page scroll */
+    animation: tectonic-glide linear both;
+    animation-timeline: scroll(root);
+    animation-range: entry 0% cover 100%;
+  }
+
+  @keyframes tectonic-glide {
+    from {
+      translate: calc(var(--direction) * -1 * var(--travel)) 0;
+    }
+    to {
+      translate: calc(var(--direction) * var(--travel)) 0;
+    }
+  }
+}
+
+
+<p>calc(pow(-1, sibling-index())) gives us alternating directions (1, -1, 1, -1), and random(15%, 44%) decides how fast each row travels. As you scroll, each typographic line moves at its own tempo.</p>
+Demo 6: Blurry Randomness
+<p>I love photography, and one of my favorite things about prime lenses is shallow depth of field. When you shoot at a wide aperture like f/1.7, only whatever is right on your focal plane stays sharp. Everything else melts away into soft bokeh. Yep, photography is all about that bokeh!</p>
+<p>By combining random() with filter: blur(), opacity, and scale, we can recreate that lens feel:</p>
+<p>See the Pen <a href="https://codepen.io/editor/smashingmag/pen/01a15e95-fe50-76dc-943b-d75fcaf704e6">All about that random() bokeh [forked]</a> by <a href="https://codepen.io/utilitybend">@utilitybend</a>.</p>
+<p>Here’s the snippet:</p>
+
+@layer demo {
+  .focal-item {
+
+    /* Random optical blur, opacity, and scale */
+    filter: blur(random(0px, 8px, 1px));
+    opacity: random(0.25, 1, 0.05);
+    scale: random(0.85, 1.25, 0.05);
+
+    transition:
+      filter 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+      opacity 0.4s ease,
+      scale 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* Rack-focus on hover */
+    &amp;:hover, &amp;:focus {
+      filter: blur(0px);
+      opacity: 1;
+      scale: 1.15;
+    }
+  }
+}
+
+
+<p>Some words land at blur(0px) with full opacity right in front of your eyes. Others blur out to 6px or 8px and fade into the background. And when you hover over any blurry item in the back, it rack-focuses right into sharpness. It’s a great little effect for decorative hero sections or tag clouds.</p>
+Where Randomness Makes Sense (And Where It Doesn’t)
+<p>Now that we’ve played with the wild side, let’s talk about where this actually belongs in our daily work.</p>
+<h3>Good Use Cases</h3>
+<ul>
+<li><strong>Subtle micro-imperfection on decorative UI</strong>: Tilting polaroids, slight angles on sticky notes, or typographic hero titles.</li>
+<li><strong>Desynchronizing ambient loops</strong>: Status beacons, gentle floating badges, or background particle grids where perfect unison looks robotic.</li>
+<li><strong>Generative backgrounds</strong>: Star fields, confetti celebrations, floating bokeh circles, or texture grain.</li>
+<li><strong>Editorial art direction</strong>: Magazine spreads, event flyers, brutalist layouts, and playful landing pages.</li>
+<li><strong>Layering on top of math</strong>: Using sibling-index() for the structural grid and adding small random offsets for human warmth.</li>
+</ul>
+<h3>Where You Should Avoid It</h3>
+<ul>
+<li><strong>Core layouts and grids</strong>: Don’t randomize column gutters, form field widths, or container padding. People need predictable layout geometry to navigate.</li>
+<li><strong>Body copy</strong>: Don’t touch font sizes, line heights, or letter spacing on long-form paragraphs. Reading fatigue is real.</li>
+<li><strong>Interactive targets</strong>: Don’t leave small buttons or links tilted or shifted without resetting them on hover and focus. If a user has to chase a moving or crooked button, you’ve failed them.</li>
+</ul>
+<p>But! I am happy to be proven wrong here. I encourage you to challenge the status quo and experiment with this.</p>
+<h3>Always Respect prefers-reduced-motion</h3>
+<p>Any time you use animations, you have to respect user preferences for reduced motion:</p>
+
+@media (prefers-reduced-motion: reduce) {
+  .char {
+    animation: none;
+    rotate: 0deg;
+    translate: 0 0;
+  }
+}
+
+
+<p>If someone prefers reduced motion, it could also be a good idea to flatten the angles, not just the animations. I can imagine that a lot of random angles can also upset people while scrolling. Design should be fun, but never at the cost of accessibility.</p>
+Wrapping My Head Around random()
+<p>Tinkering with random() over the last couple of days was a lot of fun. I’m still not sure if I’ll be able to convince my designer friends, but what I do know is that it brings a bit of <strong>joy</strong>.</p>
+<p>Whenever we wanted a bit of <strong>organic randomness</strong> on the web, we had to make compromises: either pull in a JavaScript animation library, or write huge preprocessor loops that spit out hundreds of lines of static CSS. Having this built into the browser engine with zero JavaScript overhead is such a welcome addition.</p>
+<p>We spent the last decade mastering consistency, tokens, and design systems. Now that we have that foundation in place, maybe it’s time to let a little bit of playful messiness back onto the web.</p>
+<p>I really believe that the web is supposed to be fun.</p>
+<p>Never mind the defaults; here is CSS random().</p>
+<p>See the Pen <a href="https://codepen.io/editor/smashingmag/pen/01a15e96-a7eb-71d3-b55d-473a4d097062">Never mind the defaults, here is css random() [forked]</a> by <a href="https://codepen.io/utilitybend">@utilitybend</a>.</p></div>
+</article>
+<article class="article-card" id="artikel-3020">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How to Get Recommended by AI: Being Found Isn’t Enough", "image": ["https://www.socialmediaexaminer.com/wp-content/uploads/2026/10/AIP128_PRIMARY.jpg"], "datePublished": "2026-10-20T10:00:00+00:00", "dateModified": "2026-10-20T10:00:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-3020"}</script>
+    <h2>How to Get Recommended by AI: Being Found Isn’t Enough</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp;
+        <a href="https://www.socialmediaexaminer.com/how-to-get-recommended-by-ai-being-found-isnt-enough/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://www.socialmediaexaminer.com/wp-content/uploads/2026/10/AIP128_PRIMARY.jpg" alt="How to Get Recommended by AI: Being Found Isn’t Enough" loading="lazy"><img alt="How to Get Recommended by AI: Being Found Isn&#039;t Enough by Social Media Examiner" src="https://www.socialmediaexaminer.com/wp-content/uploads/2026/10/AIP128_PRIMARY.jpg"><p>Wondering how to get your business recommended by ChatGPT, Claude, and other AI tools? Want to know what to change on your website, Google Business Profile, and customer reviews so AI search matches you with the right buyers? ​In this article, you&#8217;ll discover a four-step framework to get your business recommended by AI tools like [&#8230;]</p>
+<p>The post <a href="https://www.socialmediaexaminer.com/how-to-get-recommended-by-ai-being-found-isnt-enough/">How to Get Recommended by AI: Being Found Isn&#8217;t Enough</a> appeared first on <a href="https://www.socialmediaexaminer.com">Social Media Examiner</a>.</p></div>
+</article>
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+<article class="article-card" id="artikel-2893">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "The power of one: How the school librarian can help schools do more with less", "image": ["https://www.eschoolnews.com/files/2026/10/school-librarian-librarians-schools.png"], "datePublished": "2026-10-20T10:00:00+00:00", "dateModified": "2026-10-20T10:00:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-2893"}</script>
+    <h2>The power of one: How the school librarian can help schools do more with less</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp;
+        <a href="https://www.eschoolnews.com/innovative-teaching/2026/10/20/the-power-of-one-how-the-school-librarian-can-help-schools-do-more-with-less/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://www.eschoolnews.com/files/2026/10/school-librarian-librarians-schools.png" alt="The power of one: How the school librarian can help schools do more with less" loading="lazy"><img alt="Today’s school librarians bring classroom teaching experience, graduate-level preparation, and specialized certifications to the role" src="https://www.eschoolnews.com/files/2026/10/school-librarian-librarians-schools.png">
+<p>Technology initiatives, curriculum mandates, instructional frameworks, new programs, new platforms, new expectations, and professional development. Every year — and sometimes every month — something else is added to teachers’ plates. The result can be fragmentation, burnout, and a lack of focus.</p>
+
+
+
+<p>But what if the way forward isn’t to add more, but to use existing resources more strategically?</p>
+
+
+
+<p>One often underutilized resource is already in the building: the certified <a href="https://www.eschoolnews.com/innovative-teaching/school-library-innovations/">school librarian</a>. As an instructional partner, information literacy expert, technology integrator, and professional development leader, the librarian can help streamline efforts, reduce duplication, and build more focused, sustainable learning environments.</p>
+
+
+
+<p><strong>The initiative overload crisis</strong></p>
+
+
+
+<p>Schools face a “too much” problem. Technology initiatives are often layered onto curriculum mandates, programs, platforms, and competing priorities, often without sufficient time to implement or evaluate them. Teachers are left trying to determine what deserves their attention and how all the pieces fit together.</p>
+
+
+
+<p>Rather than adding another person, program, or initiative, administrators can begin by asking: “How can I better use the expertise of the educators I already have?”</p>
+
+
+
+<p><strong>Reconceptualizing the school librarian role</strong></p>
+
+
+
+<p>What if the solution is already in the building?</p>
+
+
+
+<p>Certified school librarians are often overlooked and underutilized. Far from simply managing the library, today’s school librarians are highly trained educators who typically bring classroom teaching experience, graduate-level preparation, and specialized certification to their positions.</p>
+
+
+
+<p>They are instructional partners, information literacy experts, technology integrators, and curriculum support leaders. In many ways, school librarians embody the TPACK model (Technological Pedagogical Content Knowledge) (Mishra &amp; Koehler, 2006)) working at the intersection of content, pedagogy, and technology.</p>
+
+
+
+<p>For administrators seeking to reduce teacher workload while strengthening instruction, fully utilizing the school librarian is an important and sometimes missed opportunity.</p>
+
+
+
+<p><strong>The instructional partnership advantage</strong></p>
+
+
+
+<p>The American Association of School Librarians (AASL) (AASL, 2020) emphasized the librarian&#8217;s role as an instructional leader and collaborator. Librarians can partner with teachers to develop learning experiences that strengthen information literacy, research skills, and critical thinking.</p>
+
+
+
+<p>They can also help teachers determine when technology or another resource meaningfully supports a learning goal. Teachers need someone who can help them determine which resources are worth their time.</p>
+
+
+
+<p>Collaborative planning brings another perspective to the table. A librarian may identify a resource particularly suited to a topic, suggest a different way for students to demonstrate learning, or help transform an assignment into an inquiry experience. The goal is not simply to add something to a lesson, but to help teachers and students focus on what matters most.</p>
+
+
+
+<p>Inquiry is especially important. Librarians regularly ask questions such as “How can we dig deeper?” and “What if we looked at this another way?” They help students develop curiosity, confidence, and skills to continue seeking answers when solutions are not immediately apparent.</p>
+
+
+
+<p><strong>Information literacy as strategic focus</strong></p>
+
+
+
+<p>Students are surrounded by information, but access to information does not mean they know how to evaluate or use it. School librarians teach students how to locate information, evaluate sources, recognize credibility, ask questions, and use information responsibly.</p>
+
+
+
+<p>&nbsp;The AASL Standards emphasize critical thinking, evaluation, and responsible use of information (AASL, 2025). These skills should not exist only within isolated “library lessons.” They should develop progressively across subjects and grade levels.</p>
+
+
+
+<p>School librarians can help teachers build on what students already know rather than having them start over each year with the same basic research skills. Developing a cohesive approach to information literacy prepares students not simply to complete assignments, but to make informed decisions throughout their lives.</p>
+
+
+
+<p><strong>Technology integrator</strong></p>
+
+
+
+<p>School librarians can help schools get more value from technology they already own.</p>
+
+
+
+<p>Rather than adopting another platform, librarians can identify existing tools that align with instructional goals and help teachers use them effectively.</p>
+
+
+
+<p>More importantly, they can help move students beyond “digital worksheets.” Technology offers greater value when students use it to investigate questions, collaborate, create, and demonstrate understanding through products such as digital stories, interactive timelines, and multimedia research projects.</p>
+
+
+
+<p>Artificial intelligence (AI) adds yet another layer to this work. School librarians can support teachers in exploring AI for tasks such as lesson planning, resource development, and instructional preparation while also helping educators consider accuracy, ethics, privacy, attribution, and appropriate use.</p>
+
+
+
+<p>Likewise, students need opportunities to develop AI literacy. The question for schools is increasingly not simply whether students will use AI, but whether they will learn to use it thoughtfully, critically, and ethically. As information specialists, school librarians are well positioned to collaborate with teachers on this work.</p>
+
+
+
+<p><strong>Professional development instructor</strong></p>
+
+
+
+<p>School librarians can also serve as in-house professional development leaders. Because they understand the school’s curriculum, technology, resources, teachers, and students, they can provide customized, just-in-time support (Lance &amp; Kachel, 2018).</p>
+
+
+
+<p>Unlike one-time professional development sessions, librarian-led support can continue after the initial training. Teachers have someone nearby who can answer questions, troubleshoot problems, model strategies, and collaborate on implementation. That ongoing relationship can turn professional development from a one-time event into sustained professional learning.</p>
+
+
+
+<p><strong>Doing more with what we already have</strong></p>
+
+
+
+<p>Schools are continually being asked to accomplish more with limited resources. One answer may not be another initiative, platform, or program. It may be making better use of the expertise already available.</p>
+
+
+
+<p>Research repeatedly connects strong school library programs and collaborative librarians’ roles with positive outcomes for students. Lance and Kachel (2018) describe high-quality school library programs as “powerful boosters of student achievement” (para. 24) that can also contribute to closing achievement gaps.</p>
+
+
+
+<p>Because school librarians work at the intersection of instruction, information, technology, and collaboration, they are uniquely positioned to support teachers and administrators while strengthening student learning.</p>
+
+
+
+<p>The power of less does not mean asking schools to accomplish less. It means being more intentional about where we invest our time, attention, and resources. Before adding the next initiative, school leaders might first ask a simpler question: What expertise do we already have in this building that we have not yet fully utilized?</p>
+
+
+
+<p>For many schools, that answer is standing in the library: the school librarian.</p>
+
+
+
+<p><strong>References</strong></p>
+
+
+
+<p>American Association of School Librarians. (2020). <em>The instructional role of the school librarian: Position statement.</em> American Library Association.</p>
+
+
+
+<p>American Association of School Librarians. (2025). <em>National school library standards for learners, school librarians, and school libraries</em> (2nd ed.). ALA Editions.</p>
+
+
+
+<p>Lance, K.C. &amp; Kachel, D. (2018, March 26). Why school librarians matter: What years of research tell us. <em>Phi Delta Kappan 99</em>(7), 15-20. <a href="https://kappanonline.org/lance-kachel-school-librarians-matter-years-research/">https://kappanonline.org/lance-kachel-school-librarians-matter-years-research/</a></p>
+
+
+
+<p>Mishra, P., &amp; Koehler, M. J. (2006). Technological pedagogical content knowledge: A framework for teacher knowledge. T<em>eachers College Record, 108</em>(6), 1017–1054.</p></div>
+</article>
+<article class="article-card" id="artikel-2689">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Chili Crisp Yogurt Chicken", "image": ["https://assets.epicurious.com/photos/6ad7ac998dfd1a2231ecdc99/master/pass/yogurt-chili-crisp-marinated-chicken_RECIPE_V1_081926_15119_VOG_final.jpg"], "datePublished": "2026-10-20T10:00:00+00:00", "dateModified": "2026-10-20T10:00:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-2689"}</script>
+    <h2>Chili Crisp Yogurt Chicken</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.epicurious.com/recipes/food/views/ba-syn-chili-crisp-yogurt-chicken" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://assets.epicurious.com/photos/6ad7ac998dfd1a2231ecdc99/master/pass/yogurt-chili-crisp-marinated-chicken_RECIPE_V1_081926_15119_VOG_final.jpg" alt="Chili Crisp Yogurt Chicken" loading="lazy">A sheet-pan wonder with lots of crispy rice.</div>
+</article>
+<article class="article-card" id="artikel-3021">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Reddit Tactics, Instagram Tools, and Industry News", "image": [], "datePublished": "2026-10-20T09:30:00+00:00", "dateModified": "2026-10-20T09:30:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-3021"}</script>
+    
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.socialmediaexaminer.com/reddit-tactics-instagram-tools-and-industry-news/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><p>Here’s a recap of the most important insights, trends, and updates you need to know about today! Catch up in minutes and go into the rest of the week prepared. In today’s edition: Where to spend your time on Reddit Instagram Reels tools to test Follow along on The Road to 3K 🗞️ Industry news [&#8230;]</p>
+<p>The post <a href="https://www.socialmediaexaminer.com/reddit-tactics-instagram-tools-and-industry-news/">Reddit Tactics, Instagram Tools, and Industry News</a> appeared first on <a href="https://www.socialmediaexaminer.com">Social Media Examiner</a>.</p></div>
+</article>
+<article class="article-card" id="artikel-1134">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "SEC and AMF Announce Supervisory MOU To Enhance Cooperation for Investment Advisers and Investment Service Providers", "image": [], "datePublished": "2026-10-20T09:25:16-04:00", "dateModified": "2026-10-20T09:25:16-04:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-1134"}</script>
+    <h2>SEC and AMF Announce Supervisory MOU To Enhance Cooperation for Investment Advisers and Investment Service Providers</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.sec.gov/newsroom/press-releases/2026-108-sec-amf-announce-supervisory-mou-enhance-cooperation-investment-advisers-investment-service" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">The U.S. Securities and Exchange Commission (SEC) and the French Autorité des Marchés Financiers (AMF) announced that they have entered into a Memorandum of Understanding (MOU) designed to facilitate consultation and information-sharing in the…</div>
+</article>
+<article class="article-card" id="artikel-1135">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "SEC, FSA Hold Autumn Financial Regulatory Dialogue", "image": [], "datePublished": "2026-10-20T08:51:00-04:00", "dateModified": "2026-10-20T08:51:00-04:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-1135"}</script>
+    <h2>SEC, FSA Hold Autumn Financial Regulatory Dialogue</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.sec.gov/newsroom/press-releases/2026-107-sec-fsa-hold-autumn-financial-regulatory-dialogue" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">The U.S. Securities and Exchange Commission (SEC) and the Financial Services Agency of Japan (FSA) convened the Autumn SEC-FSA Financial Regulatory Dialogue in Tokyo on Oct. 19, 2026.The SEC–FSA Dialogue builds upon longstanding efforts between the two…</div>
+</article>
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+<article class="article-card" id="artikel-3781">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Your aging brain may be trading memory for something more valuable", "image": [], "datePublished": "2026-10-20T07:31:22-04:00", "dateModified": "2026-10-20T07:31:22-04:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-3781"}</script>
+    <h2>Your aging brain may be trading memory for something more valuable</h2>
+    <div class="article-meta">
+        📅 Oct 20, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.sciencedaily.com/releases/2026/10/261019093357.htm" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">The aging brain may be undergoing a remarkable transformation rather than simply losing its abilities, shifting its focus from remembering details to understanding the bigger picture. Scientists suggest this change could be an evolutionary adaptation that helps older adults develop wisdom and share decades of knowledge with younger generations.</div>
+</article>
+<article class="article-card" id="artikel-2840">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Survey: Most Organizations Are Not Consistently Measuring AI Value Against Costs", "image": [], "datePublished": "2026-10-19T21:23:00+00:00", "dateModified": "2026-10-19T21:23:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-2840"}</script>
+    <h2>Survey: Most Organizations Are Not Consistently Measuring AI Value Against Costs</h2>
+    <div class="article-meta">
+        📅 Oct 19, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp;
+        <a href="https://thejournal.com/articles/2026/10/19/survey-most-organizations-are-not-consistently-measuring-ai-value-against-costs.aspx" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">A new study from consulting firm KPMG found that while AI investment continues to grow, relatively few organizations consistently measure whether the technology's benefits justify its costs.</div>
+</article>
+<article class="article-card" id="artikel-3468">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Year-End Tax Planning for Physicians. What To Do Before 2026 Is Over", "image": ["https://www.physicianonfire.com/wp-content/uploads/2026/10/e759cfb6-1a3d-4b6b-b505-d3f682862f5d-1024x578.png"], "datePublished": "2026-10-19T20:55:21+00:00", "dateModified": "2026-10-19T20:55:21+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-3468"}</script>
+    
+    <div class="article-meta">
+        📅 Oct 19, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.physicianonfire.com/year-end-tax-planing-physicians/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://www.physicianonfire.com/wp-content/uploads/2026/10/e759cfb6-1a3d-4b6b-b505-d3f682862f5d-1024x578.png" alt="Year-End Tax Planning for Physicians. What To Do Before 2026 Is Over" loading="lazy"><img alt="" src="https://www.physicianonfire.com/wp-content/uploads/2026/10/e759cfb6-1a3d-4b6b-b505-d3f682862f5d-1024x578.png">Taxes may be the last thing on your mind right now. The kids are studying for mid-terms and the holidays ... <a href="https://www.physicianonfire.com/year-end-tax-planing-physicians/" title="Year-End Tax Planning for Physicians. What To Do Before 2026 Is Over">Read more</a></div>
+</article>
+<article class="article-card" id="artikel-3312">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Class 4 Terrain, Cozy Huts, Cold Beer: The Northern Alps Are Japan’s Best-Kept Secret", "image": ["https://cdn.trailrunnermag.com/wp-content/uploads/2026/10/Japanese-Northern-Alps-2.png?width=1200"], "datePublished": "2026-10-19T20:31:56+00:00", "dateModified": "2026-10-19T20:31:56+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-3312"}</script>
+    <h2>Class 4 Terrain, Cozy Huts, Cold Beer: The Northern Alps Are Japan’s Best-Kept Secret</h2>
+    <div class="article-meta">
+        📅 Oct 19, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.trailrunnermag.com/travel/hut-to-hut-trip-across-japans-northern-alps/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://cdn.trailrunnermag.com/wp-content/uploads/2026/10/Japanese-Northern-Alps-2.png?width=1200" alt="Class 4 Terrain, Cozy Huts, Cold Beer: The Northern Alps Are Japan’s Best-Kept Secret" loading="lazy"><img alt="Class 4 Terrain, Cozy Huts, Cold Beer: The Northern Alps Are Japan's Best-Kept Secret" src="https://cdn.trailrunnermag.com/wp-content/uploads/2026/10/Japanese-Northern-Alps-2.png?width=1200"></div>
+</article>
+<article class="article-card" id="artikel-838">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Rio Ferdinand disappointed Man Utd didn’t sign midfielder better than Elliot Anderson", "image": ["https://media.readmanutd.com/readmanutd/sites/20/2026/09/prsiJKQn7ffL.webp"], "datePublished": "2026-10-19T19:40:00+00:00", "dateModified": "2026-10-19T19:40:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page168.html#artikel-838"}</script>
+    <h2>Rio Ferdinand disappointed Man Utd didn’t sign midfielder better than Elliot Anderson</h2>
+    <div class="article-meta">
+        📅 Oct 19, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://readmanutd.com/2026/10/19/rio-ferdinand-man-utd-ayyoub-bouaddi-man-city/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://media.readmanutd.com/readmanutd/sites/20/2026/09/prsiJKQn7ffL.webp" alt="Rio Ferdinand disappointed Man Utd didn’t sign midfielder better than Elliot Anderson" loading="lazy"><p><strong>Rio Ferdinand has admitted he is disappointed that Manchester United failed to sign Ayyoub Bouaddi, with the highly-rated midfielder now making an impression at Manchester City.</strong></p>
+
+
+
+<p><a href="https://readmanutd.com/tag/manchester-city/">Manchester City</a> beat several rivals to secure Bouaddi’s signature over the summer in a deal worth £86 million. The Morocco international became the Premier League’s most expensive teenager, and Rio Ferdinand believes <a href="https://readmanutd.com/tag/manchester-united/">Manchester United</a> missed out on a special talent.</p>
+
+
+
+<p>The former United defender was particularly impressed by Bouaddi’s second-half cameo during City’s <a href="https://readmanutd.com/tag/champions-league/">Champions League</a> defeat to Paris Saint-Germain last week. His performance reminded <a href="https://readmanutd.com/tag/rio-ferdinand/">Rio Ferdinand</a> why he had been talking about the youngster throughout the previous year and during the summer transfer window.</p>
+
+
+
+<h2><strong>Ferdinand rues Manchester United’s missed opportunity</strong></h2>
+
+
+
+<p><a href="https://www.youtube.com/@rioferdinandpresents">Speaking on his YouTube channel</a>, Ferdinand highlighted how Bouaddi was the highlight of the game against PSG and who they missed.</p>
+
+
+
+<p>“He came on and showed PSG that they may have missed out on someone who was on their doorstep when he was playing in France,” Ferdinand said.</p>
+
+
+
+<p>The former England international also confirmed that Manchester United had been interested in bringing the midfielder to Old Trafford, but the transfer fee was too expensive.</p>
+
+
+
+<p>“Manchester United were in for him, 100%, but the fee was just too much,” he added.</p>
+
+
+
+<p>Ferdinand was left frustrated by what he saw from the teenager, who turned 19 this month.</p>
+
+
+
+<p>“Just that little cameo against PSG makes you go, ‘oh, I can’t believe we missed out on that. I can’t believe it.’ I’m so gutted, so gutted. He’s bad! He’s so calm under pressure.”</p>
+
+
+
+<h2>Ayyoub <strong>Bouaddi could become a key player for Man City</strong></h2>
+
+
+
+<p>Rio Ferdinand suggested Bouaddi’s quality could soon make the midfield position in a packed Manchester City his regular role.</p>
+
+
+
+<p>City already have Elliot Anderson and Enzo Fernandez among their midfield options, but Ferdinand believes Bouaddi has the ability to stand out alongside them.</p>
+
+
+
+<p>“They’ve got Elliot Anderson and Enzo Fernandez in that midfield as well but this kid could be the best of the three, easily.”</p>
+
+
+
+<p></p></div>
+</article>
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+<div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html" class="active">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

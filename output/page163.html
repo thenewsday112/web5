@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 163</title>
+<meta name="description" content="Page 163">
+<link rel="canonical" href="https://thenewsday112.github.io/pyton/page163.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="politics.html">📰 Politics</a><a href="world.html">📰 World</a><a href="finance.html">📰 Finance</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 163</h1>
+<article class="article-card" id="artikel-4227">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "PHP2Shell and eMudhra Patched", "image": [], "datePublished": "2026-10-23T13:08:08+00:00", "dateModified": "2026-10-23T13:08:08+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-4227"}</script>
+    <h2>PHP2Shell and eMudhra Patched</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.docker.com/blog/php2shell-and-emudhra-patched/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><p>Two security events landed side by side this week, PHP2Shell and the eMudhra certificate compromise. Both reached the same place, the foundation their applications are built on.</p>
+
+
+
+<p>PHP2Shell is a pair of critical flaws in the PHP engine itself, CVE-2026-109618 and CVE-2026-109619. They let an unauthenticated request become code execution on the server, on any PHP application, however careful its own code is, and PHP runs about 69% of the websites whose server-side language is known.</p>
+
+
+
+<p>The eMudhra compromise is a different kind of problem. Eight intermediate certificates from the certificate authority eMudhra turned out to have private keys that can be computed from the public certificates, which let anyone issue a certificate for any website and have it accepted. Browsers revoke certificates like these on their own, but a container image carries its own trust store and keeps trusting them until it is rebuilt.</p>
+
+
+
+
+
+    <h2>
+        Docker Hardened Images published a fixed PHP image within 24 hours
+    </h2>
+
+
+
+<p></p>
+
+
+
+<p>The dhi.io/php image was rebuilt on the patched PHP and published early on October 22, within 24 hours of the upstream release and after the DHI testing and verification steps. Pulling the current tag puts you on the fixed version. The few DHI images that bundle their own PHP application, such as composer and nextcloud, follow as their upstream projects release.</p>
+
+
+
+<h2>Rebuilt across the catalog, verifiable tag by tag</h2>
+
+
+
+<p>The certificate compromise touched the whole catalog, because every image carries a trust store. In the 48 hours after the PHP release, the DHI build system ran 16,567 package and image builds across the catalog. <strong>By 10pm UTC on October 22, almost all catalog tags were on the fixed CA store, with most of the rest in the build queue.</strong> That percentage comes from the SBOM that ships with every image, read for every published tag to check which CA store and which PHP version it carries, and you can run the same check on anything you pull.</p>
+
+
+
+<h2>How to make sure your environments are covered</h2>
+
+
+
+<p>If you run PHP on Docker Hardened Images, pull the current tag for your branch and redeploy, and rebuild anything you built on top of a DHI image so it picks up the new base docker pull <a href="http://dhi.io/php:8.4">dhi.io/php:8.4</a></p>
+
+
+
+<p>Customizations built through the DHI Enterprise workflow are rebuilt automatically when the base layer is patched. For the certificate fix the same applies to every image you build from a DHI base, PHP or not. The <a href="https://www.docker.com/blog/security-update-on-php2shell-impact-for-docker-customers/">Docker Security update from October 22</a> lists the affected PHP versions and the support path.</p>
+
+
+
+<p>If you run PHP in any other container, check the PHP version running inside it rather than the tag on the outside, and rebuild it on a patched base.</p>
+
+
+
+<h2>Build from a trusted foundation</h2>
+
+
+
+<p>Weeks like this one will keep coming, but a trusted foundation will make all the difference.</p>
+
+
+
+<p>If you are not building on hardened images yet, this week is the wake-up call and the week to start. Both events landed on the foundation, and that is where the fix has to happen, in the image itself, rebuilt from fixed sources before anyone pulls it.</p>
+
+
+
+<p>This is exactly what Docker Hardened Images were built for. Docker builds, patches and maintains the system packages inside each image from source, and the build system is event-driven, so an upstream release or a changed package triggers rebuilds of everything that depends on it. Each image ships signed, with its SBOM, SLSA Build Level 3 provenance and VEX data attached, which is why a rebuild of this size can be measured as well as done.</p>
+
+
+
+<p>The catalog is free and open source under Apache 2.0, with near-zero CVEs on every image. It stays compatible with the Alpine and Debian your teams already run, so adoption is a one-line change to the FROM line in your Dockerfile, with no migration project attached. DHI Select and DHI Enterprise add SLA-backed remediation with critical CVE fixes within 7 days, FIPS and STIG variants, image customization with the guarantees kept, and Extended Lifecycle Support for the versions upstream has stopped patching. All of it is in the <a href="https://hub.docker.com/hardened-images/catalog">Docker Hardened Images catalog</a>, free to pull today.</p></div>
+</article>
+<article class="article-card" id="artikel-3794">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Accordion Icons: Which Work Best?", "image": ["http://files.smashing.media/articles/how-name-things-choose-accordion-icons/accordion-icons-which-work-best.jpg"], "datePublished": "2026-10-23T13:00:00+00:00", "dateModified": "2026-10-23T13:00:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-3794"}</script>
+    <h2>Accordion Icons: Which Work Best?</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="http://files.smashing.media/articles/how-name-things-choose-accordion-icons/accordion-icons-which-work-best.jpg" alt="Accordion Icons: Which Work Best?" loading="lazy"><p>So what icon is the <strong>most reliable</strong> to show expansion and collapsing for accordions? Is there really any noticeable difference between carets, chevrons, arrows, and triangles?</p>
+<p>Well, <a href="https://www.nngroup.com/articles/accordion-icons/">research</a> shows that there is some difference indeed. But what’s more interesting is that <strong>split menus are harmful</strong>, why it's better to not have icons and text labels link to different actions, and why the caret is the safest icon choice. Let’s dive in!</p>
+<p><img src="https://files.smashing.media/articles/how-name-things-choose-accordion-icons/15-accordion-icons.jpg"></p>
+No Icon = Opening The Page
+<p>The findings aren’t very surprising: without any icon in use, users expect that tapping on the menu item would take them directly to a new page. Users often struggle with <strong>custom icons</strong> as they don't clearly signal that they'll open an accordion. And people tend to tap fairly equally on the icon and on the label for most icons.</p>
+<p><img src="https://files.smashing.media/articles/how-name-things-choose-accordion-icons/10-accordion-icon-study.jpg"></p>
+<p>Many designs (like the one below) tend to slightly <strong>overcomplicate things</strong> by adding arrows and carets pointing everywhere, depending on the state of the accordion. But typically we don't need to use an arrow to indicate a link to the category.</p>
+<p><img src="https://files.smashing.media/articles/how-name-things-choose-accordion-icons/11-nng-aaccordion-icon-study.jpg"></p>
+<p>The rule of thumb is very simple: if it’s a link, the easiest and most effective way is to <strong>simply underline it</strong> — without any arrow, caret, or other icon. Perhaps it’s not particularly exciting, but it works flawlessly every single time.</p>
+Confusing Behavior With Arrows ▶ and Split Buttons
+<p>Using a right-facing arrow icon ▶ <strong>isn’t</strong> associated with an expectation of going directly to a new page. And having the same icon pointing down ▼ doesn’t necessarily imply that an accordion is going to open on tap/click.</p>
+<p>It’s a good idea to <strong>avoid split buttons for accordions</strong> — where the text label links directly to a page, but the icon opens the accordion. Instead, it’s much more reliable to allow users to tap on a main category and expose the menu; and to access the category page, we add a link to it inside the menu.</p>
+<p><img src="https://files.smashing.media/articles/how-name-things-choose-accordion-icons/12-accordion-navigation-dhl.jpg"></p>
+Plus +/− and Arrows ↓/↑ Are Understood, But Can Be Misunderstood
+<p>For accordions, we typically use +/− or arrows ↓/↑ to signal expanded and collapsed states, and typically it works well. However, both have <strong>many different interpretations</strong>. Plus + can mean anything from saving for later to adding to cart to zooming in, and can be particularly confusing for multi-level navigation, with many levels open at the same time.</p>
+<p><img src="https://files.smashing.media/articles/how-name-things-choose-accordion-icons/13-split-button-accordion-pattern.jpg"></p>
+<p>Arrows ↓/↑ can mean scrolling or sliding or finding the next match, but also a jump to a particular portion of a page. Both plus and arrows are well-understood and work, but depending on the design, can be confusing — mostly because <strong>they are overloaded</strong>.</p>
+Wrapping Up
+<p>The safe choice is to use the <strong>caret/triangle pointing down ▼ by default</strong>, and change it to a caret pointing up or a caret pointing sideways ▶ on interaction. If you need an alternative, then +/- typically work well, too.</p>
+<p><img src="https://files.smashing.media/articles/how-name-things-choose-accordion-icons/14-lensorg-accordion.jpg"></p>
+<p>But we certainly don’t need any further icons or arrows to indicate where the links go. The same goes for split menus, which often produce more mistakes than help. Instead, we have one button or dropdown that does exactly one thing — shows all options and allows users to drill down.</p>
+<p>And if you need a direct link, we link the title directly to the page and <strong>underline it</strong>. More often than not, simpler is better.</p>
+<h3>Editor’s Note</h3>
+<p>We hope you’ll find these wonderful projects useful — put together by wonderful creators. A friendly shout-out to everyone sharing their work with folks to use and learn from! That’s one of the reasons why we truly love the web and people building and designing it. 💚</p>
+<p>At Smashing, <strong>we love the web</strong>. That’s why we publish articles and books, run workshops and events around everything web. We love seeing what we all can do to make the web more accessible and usable. We also love organizing and attending <a href="https://smashingconf.com/online-workshops">online events</a> — with <strong>friendly discounts</strong> for large groups (5+ attendees) and schools and students. Interested? Just <a href="https://smashingconf.com/contact">send us an email</a> and we’ll sort it out!</p>
+<ul>
+<li>Multiple <strong>live sessions</strong> (2.5h each),</li>
+<li><strong>09:00 – 11:30 AM PT</strong> (18:00 – 20:30 CET)</li>
+<li>With <strong>workshop video recordings</strong> &amp; slides,</li>
+<li><a href="https://www.youtube.com/watch?v=6vGXBWj0hI0">Free video preview </a>(2.5h)</li>
+<li><a href="https://smashingconf.com/online-workshops#all-workshops">Jump to all workshops →</a></li>
+</ul></div>
+</article>
+<article class="article-card" id="artikel-3579">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How Yin Yoga Bananasana Can Transform Your Swimming", "image": ["https://cdn.triathlete.com/wp-content/uploads/2026/10/How-to-do-Bananasana.jpg?width=1200"], "datePublished": "2026-10-23T12:06:06+00:00", "dateModified": "2026-10-23T12:06:06+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-3579"}</script>
+    
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.triathlete.com/training/workouts/side-stretch-for-swimmers-to-improve-breathing/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://cdn.triathlete.com/wp-content/uploads/2026/10/How-to-do-Bananasana.jpg?width=1200" alt="How Yin Yoga Bananasana Can Transform Your Swimming" loading="lazy"><img alt="How Yin Yoga Bananasana Can Transform Your Swimming" src="https://cdn.triathlete.com/wp-content/uploads/2026/10/How-to-do-Bananasana.jpg?width=1200">
+<p>Improve your breathing efficiency in the water with Bananasana, a gentle yoga pose designed to expand rib mobility and release side-body tightness.</p>
+<p>Read the full article at <a href="https://www.triathlete.com/training/workouts/side-stretch-for-swimmers-to-improve-breathing/">How Yin Yoga Bananasana Can Transform Your Swimming</a> on <a href="https://www.triathlete.com">Triathlete</a>.</p></div>
+</article>
+<article class="article-card" id="artikel-3895">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "What’s Important to Us When Making Political Decisions?", "image": [], "datePublished": "2026-10-23T11:40:00+00:00", "dateModified": "2026-10-23T11:40:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-3895"}</script>
+    <h2>What’s Important to Us When Making Political Decisions?</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Science</strong> &nbsp;|&nbsp;
+        <a href="https://greatergood.berkeley.edu/article/item/whats_important_to_us_when_making_political_decisions" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><p>A core assumption in any democracy is that citizens with access to information will make reasoned decisions on political candidates and policy issues. But a new study by UC Berkeley social scientists finds that Americans usually don’t consider the full scope of difficult issues, instead basing their opinions on mental shortcuts that sidestep complexity.</p>
+
+<p><a href="https://www.pnas.org/doi/10.1073/pnas.2613113123" title="">The paper</a> offers striking insight into the differences in cognitive reasoning patterns among Americans. While some people in the study did closely analyze a range of issues before coming to an opinion, others did a quick back-of-the-napkin tally of plusses and minuses, or even more commonly based their opinions on just one factor, the authors found.</p>
+
+<p>“When people make complicated choices with many considerations—which political candidate to support, which immigrant they would rather admit to the country, which climate policy they prefer—we tend to assume they’re weighing all the factors,” said Berkeley political scientist <a href="https://polisci.berkeley.edu/people/person/kirk-bansak" title="">Kirk Bansak</a>. But, he added, “we find that most of them aren’t. Most commonly, people rely on a mental shortcut, effectively deciding based on the single factor they care about most and largely ignoring the rest.”</p>
+
+<p>For example, when asked to choose between two fictional U.S. Senate candidates based on age, gender, race, education, military experience, and political experience, many of the study participants would make their decision based on just one of those factors.</p>
+
+<p>That doesn’t mean that people are irrational, said coauthor <a href="https://www.linkedin.com/in/nidhi-banavar/" title="">Nidhi Banavar</a>, a Berkeley cognitive scientist. “The kind of rationality that we define in the paper is quite different from what many humans actually do in real life,” she explained. “We have these amazing brains, but they’re not the infinite computational machines that would be necessary in order to do the kind of ‘rational’ we imagine in our paper.”</p>
+
+<p>Still, the findings have clear implications for politics and political communication. For example, Banavar said, if a leader knows that public opinion on climate change is dominated by pocketbook concerns to the exclusion of other issues, then that single factor might weigh heavily in political advertising. Complex science issues, meanwhile, might be downplayed.</p>
+
+<p>The paper, “<a href="https://www.pnas.org/doi/10.1073/pnas.2613113123" title="">Classifying Strategy Use in Multi-Attribute Subjective Choice: Application to Conjoint Experiments in Political Science</a>,” was published recently in <em>Proceedings of the National Academy of Sciences</em>. Bansak is an associate professor of political science at UC Berkeley; Banavar is a postdoctoral researcher in political science at UC Berkeley.</p>
+
+<p>The foundational ideals of American democracy grew from the Enlightenment era some three centuries ago. Central to that framework was a belief that humans, being rational, are capable of governing themselves—and justified in demanding political power. A core concept has been the marketplace of ideas, a constant competition between political and policy goals, plans, and analysis that would inform citizens and help them to govern themselves.</p>
+
+<p>While many eras in U.S. history feature episodes in which reason faltered, modern social scientists have detailed the ways in which cognitive bias, <a href="https://fourweekmba.com/rational-ignorance/" title="">rational ignorance</a>, and other behaviors short-circuit reasoning. Still, the hopeful assumption about human reasoning persists.</p>
+
+<h2>Deep patterns in decision making</h2>
+
+<p>Social scientists have long studied human decision making at the aggregate level. Banavar and Bansak set out to build a new kind of cognitive model, a complex tool that can enable researchers to see an individual’s decision making mid-process, in detail.</p>
+
+<p>The model doesn’t give them a view into the minds of their research subjects, but the researchers can study hundreds or thousands of decisions by an individual; from these patterns, they can perceive the values and reasoning processes that shape their decisions.</p>
+
+<p>In all, nearly 3,800 people were involved in the study. Each participant sat at a computer screen, and the computer generated a random set of choices in three areas: which migrants they would rather admit to the United States, which Senate primary candidate they would rather vote for, and which climate policy package they would prefer the United States to adopt.</p>
+
+<p>Consider the basic question comparing two hypothetical migrants to the U.S. Their profiles appeared side by side, each described by six factors: region of origin, education level, gender, age, English proficiency, and whether they were seeking economic opportunity or asylum. The research subject would have to choose which of the migrants they preferred to admit to the U.S. </p>
+
+<p>The computer randomly presented 30 different sets of hypothetical migrants. If a participant consistently chose the younger migrant or the migrant with greater English skills, for example, the researchers could conclude that that was the most important factor for that participant.</p>
+
+<p>The same decision framework was presented for comparing potential climate change policies and fictional U.S. Senate candidates. </p>
+
+<p>The research did yield some insights about basic priorities: Participants preferred younger political candidates. They preferred climate change policy that minimized economic impact on their household. They preferred immigrants who were seeking asylum as opposed to seeking economic opportunity, and those who were below retirement age. </p>
+
+<p>But that wasn’t the primary purpose of the study. Banavar and Bansak were less interested in what participants decided, and more interested in <em>how</em> they decided.</p>
+
+<h2>Thoughtful reflection or hot takes?</h2>
+
+<p>The results were striking: In 68% of the cases, study participants used shortcuts and did not deeply assess all six factors when choosing between hypothetical Senate candidates, migrants, or climate policies.</p>
+
+<p>Nearly 54% showed a pattern of making choices dominated by one of the six factors. Another 14% took a different shortcut: Given six factors for each candidate or policy, they counted the total number of factors that they preferred for each, then chose the one containing the greater number. </p>
+
+<p>How many used a comprehensive evaluation of all six factors—a rational assessment, without any shortcuts? Just under 30%.</p>
+
+<p>Interestingly, Banavar said, a majority of participants did not consistently stay with the same strategy. Some might rely on just one factor in choosing a climate policy, while more fully weighing all the factors in deciding which migrant to admit.</p>
+
+<p>“You can’t put people into buckets to say, ‘OK, this is someone who’s actually only going to care about only one thing,’” she said. “People are actually relating differently to each of these different domains and choosing to use different levels of effort, for want of a better term.”</p>
+
+<p>To understand why people shift strategies will require further research, she said.</p>
+
+<p>The study comes with some important caveats: If a participant favored female candidates, for example, or migrants who were seeking political asylum, and if both choices had those attributes, the participants had to consider other factors. That reduced, but did not eliminate, the pattern of making a choice based on one factor.</p>
+
+<p>But when the researchers asked the participants to rate each profile before choosing one of them, the participants were more inclined to consider all factors in making their choices.</p>
+
+<p>Further, the researchers allowed for only two attributes in their comparisons—male or female, for example, white or Black, or aged in their 50s or 70s. That’s not ideal, Banavar said, but to include multiple races, for example, is too complex for the cognitive model, and would dilute the patterns in the data. In the choice of Senate candidates, the study did not include the fictional candidates’ political parties. That question could provoke such strong, reflexive reactions that it would cloud the findings, she said.</p>
+
+<h2>Implications for real-world politics</h2>
+
+<p>The authors say their research has important implications not just for cognitive research, but for real-world, on-the-ground U.S. political processes.</p>
+
+<p>Often, Bansak said, our understanding of public opinion is based on surveys that ask people to choose between complex options defined by many factors. The new research shows analysts that individuals often base their opinions on a single factor, and that can create a clearer picture of what people want in public policy, and why they want it.</p>
+
+<p>“This bears directly on how we interpret the kind of public-opinion and preference data that routinely informs policy debates and news coverage,” he said.</p>
+
+<p>And that understanding, Banavar said, can shape the policy process—and political communication. If leaders present issues in layers of complexity, “how much are people going to read or listen to that?” she asked. “What is the thing that’s really important to them, given a particular issue? That’s completely lost when you don’t think about the decision-making process.”</p>
+
+<p><em>This article was originally published on <a href="https://news.berkeley.edu">Berkeley News</a>. Read the <a href="https://news.berkeley.edu/2026/10/01/on-complex-political-issues-most-americans-take-shortcuts-to-simplicity/">original article</a>.</em></p></div>
+</article>
+<article class="article-card" id="artikel-3429">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Pain And Penalty: Why A Dad Bod Challenge Works When Willpower Doesn’t", "image": [], "datePublished": "2026-10-23T11:18:00+00:00", "dateModified": "2026-10-23T11:18:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-3429"}</script>
+    
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.financialsamurai.com/dad-bod-challenge/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><p>If you want to lose weight and gain muscle, join a dad bod or a mom bod challenge. The social pressure to hit your goals will be immense. And if you put a financial penalty for not meeting your goals by a certain date, you will be even more motivated to get fitter. Since graduating [&#8230;]</p>
+<p>The post <a href="https://www.financialsamurai.com/dad-bod-challenge/">Pain And Penalty: Why A Dad Bod Challenge Works When Willpower Doesn’t</a> appeared first on <a href="https://www.financialsamurai.com">Financial Samurai</a>.</p></div>
+</article>
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+<article class="article-card" id="artikel-3078">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "U.S. Government Contractor Arrested for Allegedly Leaking National Defense Information", "image": [], "datePublished": "2026-10-23T10:30:00+00:00", "dateModified": "2026-10-23T10:30:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-3078"}</script>
+    <h2>U.S. Government Contractor Arrested for Allegedly Leaking National Defense Information</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.fbi.gov/news/press-releases/us-government-contractor-arrested-for-allegedly-leaking-national-defense-information" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">Ian A. Brinksman, 42, of the District of Columbia, a U.S. government contractor, has been arrested by the FBI for allegedly leaking national defense information.</div>
+</article>
+<article class="article-card" id="artikel-2158">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Why More Buyers Are Turning To Adjustable-Rate Mortgages Today", "image": ["https://files.keepingcurrentmatters.com/KeepingCurrentMatters/content/images/20261021/Header-Image-GettyImages-2211569653.png"], "datePublished": "2026-10-23T10:30:00+00:00", "dateModified": "2026-10-23T10:30:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-2158"}</script>
+    
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.keepingcurrentmatters.com/2026/10/23/why-more-buyers-are-turning-to-adjustable-rate-mortgages-today/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://files.keepingcurrentmatters.com/KeepingCurrentMatters/content/images/20261021/Header-Image-GettyImages-2211569653.png" alt="Why More Buyers Are Turning To Adjustable-Rate Mortgages Today" loading="lazy"><img alt="Why More Buyers Are Turning To Adjustable-Rate Mortgages Today | Keeping Current Matters" src="https://files.keepingcurrentmatters.com/KeepingCurrentMatters/content/images/20261021/Header-Image-GettyImages-2211569653.png">When mortgage rates climb, buying a home can start to feel like trying to hit a moving target. Every jump in rates makes monthly payments bigger, and that pushes a lot of buyers to look for another way in.</div>
+</article>
+<article class="article-card" id="artikel-3931">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How to stop nightmares and fall back asleep after bad dreams", "image": ["https://images.squarespace-cdn.com/content/v1/57b5ef68c534a5cc06edc769/1689164237135-1IFQ9Y4Y4I94X29XVXJM/how-to-prevent-nightmares.jpg?format=1500w"], "datePublished": "2026-10-23T10:29:35+00:00", "dateModified": "2026-10-23T10:29:35+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-3931"}</script>
+    <h2>How to stop nightmares and fall back asleep after bad dreams</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Entertainment</strong> &nbsp;|&nbsp;
+        <a href="https://blog.calm.com/blog/how-to-prevent-nightmares" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://images.squarespace-cdn.com/content/v1/57b5ef68c534a5cc06edc769/1689164237135-1IFQ9Y4Y4I94X29XVXJM/how-to-prevent-nightmares.jpg?format=1500w" alt="How to stop nightmares and fall back asleep after bad dreams" loading="lazy">
+        
+      
+        <a href="https://calm.onelink.me/GyG4/o9tukrg6/?utm_campaign=evergreen&amp;utm_medium=organic&amp;utm_source=blog">
+          
+      
+        
+          
+          
+          
+          
+          
+          
+          <img alt="" src="https://images.squarespace-cdn.com/content/v1/57b5ef68c534a5cc06edc769/7c0cedd8-5e6f-44cc-bec4-4747a09eedf1/how-to-prevent-nightmares.jpg?format=1000w">
+        
+      
+    
+        </a>
+      
+
+      
+        
+
+          
+        
+      
+    
+      
+    
+
+    
+
+
+  
+
+  
+
+
+  
+
+
+  
+    
+  
+    <img src="https://static1.squarespace.com/static/656f4e4dababbd7c042c4946/t/659edb527099633496ccfcfa/1704909650356/dr-chris-mosunic.jpg">
+  
+  <p>Clinically reviewed by <a href="https://www.calm.com/blog/chris-mosunic">Dr. Chris Mosunic</a>, PhD, RD, CDCES, MBA</p>
+
+  
+  
+
+
+
+
+
+
+
+
+  
+  <h2>Nightmares can be a nightmare for your health and well-being. Find out what causes bad dreams to learn how to prevent them, and fall back to sleep more easily.&nbsp;</h2><p>Nightmares can be really tough. They jolt us awake in the middle of the night, often in a cold sweat with a racing heart, and the residue of the bad dream leaves us feeling shaken and on edge, making it hard to fall back asleep. And we all know how much more challenging everything else becomes when our sleep is disrupted.</p><p>Recurring nightmares can wreck your sleep and leave you feeling drained, anxious, or unsettled the next day. If you’ve found yourself googling, “why do I keep having nightmares?” or, “how to stop bad dreams every night,” you’re not alone. </p><p>Nightmares can be triggered by everything from stress and sleep disorders to late-night snacks or certain medications. Thankfully, there are proven strategies to reduce their frequency and help you get back to sleep after a bad dream. </p><p>Let’s explore common nightmare causes, tips to prevent them, and techniques to calm your mind and body when you wake up in the middle of the night.</p>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+    
+
+    
+
+    
+      
+
+        
+      
+        <a href="http://calm.com/signup-flow">
+          
+      
+        
+          
+          
+          
+          
+          
+          
+          <img alt="" src="https://images.squarespace-cdn.com/content/v1/656f4e4dababbd7c042c4946/61a88641-b037-4446-8c8e-6457860bfff4/try-calm-for-free.png?format=1000w">
+        
+      
+    
+        </a>
+      
+
+      
+        
+
+          
+        
+      
+    
+      
+    
+
+    
+
+
+  
+
+  
+
+&nbsp;
+  
+  <h2>The truth about nightmares</h2><p>Sleep disruptions, like frequent nightmares and bad dreams, can take their toll on our well-being. It’s not just about feeling tired the next day. It’s about how those disturbances affect our mood, energy levels, productivity, and our mental health. Getting enough sleep is crucial when it comes to rejuvenating our bodies and resting our minds, but when you’re experiencing nightmares on the reg, peaceful sleep can feel like a distant dream.&nbsp;</p><p>But there is hope. With awareness and understanding of what’s causing your nightmares, along with some <a href="https://blog.calm.com/blog/3-key-ingredients-for-good-sleep">effective strategies</a>, it’s possible to manage, if not prevent, bad dreams. Tools such as mindfulness and meditation can help you cultivate a more peaceful mind and significantly improve the quality of your sleep.</p><h2>What causes nightmares? 7 common reasons bad dreams happen</h2><p>Nightmares don’t tend to be random. They’re usually the product of various factors at work in our subconscious or conscious minds. So a key factor in tackling nightmares is being able to understand what’s prompting them.</p><ol><li><p><strong>Stress and/or anxiety:</strong> Perhaps unsurprisingly, frequent nightmares can be the product of stress or anxiety that’s present in our waking life. It’s like your mind extends the day’s worries into your sleep. That upcoming work presentation, conflict with your partner, or just the sheer weight of day-to-day tasks can all find their way into your dreams, causing nightmares.</p></li><li><p><strong>Eating too close to bedtime:</strong> That late-night snack might be more trouble than it’s worth. And no, it’s not just <a href="https://blog.calm.com/blog/the-10-most-widely-held-myths-and-why-theyre-wrong">cheese</a>, which, by the way, doesn’t actually cause nightmares. Heavy or spicy meals, in particular, can lead to physical discomfort that disturbs your sleep, often inducing vivid and sometimes bad dreams.</p></li><li><p><strong>Scary movies, TV shows, or books:</strong> Love a good horror movie or thriller book before bed? You might want to rethink that. Your subconscious can weave elements of the contents of whatever you’ve been reading or watching into your dreams, creating some pretty unsettling mental visualizations when the lights go off.</p></li><li><p><strong>Traumatic experiences:</strong> If you’ve been through a particularly challenging event either recently or in the past, the trauma of whatever happened could show up in your dreams. This is normal. It’s your brain’s way of processing the trauma, but it can lead to recurring nightmares, which can be distressing and even prevent sleep.&nbsp;</p></li><li><p><strong>Alcohol, drugs, and/or caffeine:</strong> It may feel like alcohol and drugs ease you into sleep more easily than going to bed unassisted, but these substances often disrupt the quality of your sleep and can lead to vivid, intense nightmares.</p></li><li><p><strong>Medications</strong>: Some prescription drugs, including certain types of antidepressants, blood pressure medicines, and beta blockers, can lead to bad dreams. If you’ve started a new medication and are experiencing frequent nightmares, you might want to talk to your doctor.</p></li><li><p><strong>Sleep disorders:</strong> Sleep conditions like sleep apnea and restless leg syndrome can disrupt sleep and lead to nightmares. If you’re experiencing symptoms such as daytime sleepiness or morning headaches, please check in with a healthcare provider.</p></li></ol><p>Knowing what triggers your nightmares is the first step in <a href="https://blog.calm.com/blog/5-ways-to-improve-your-sleep-with-mindfulness-practices">gaining control</a> over them. Remember, the goal isn’t to eliminate all dreams but to cultivate a more relaxed sleep experience. After all, dreams are a natural part of sleep, and many of them can be magical, rejuvenating, and creative experiences.&nbsp;</p><h2>10 tips to prevent nightmares and stop bad dreams</h2><p>Now that we know what might be causing nightmares, here are some strategies to help keep bad dreams at bay.</p><h3><strong>1. Establish a bedtime routine</strong></h3><p>Routines aren’t just <a href="https://blog.calm.com/blog/your-child-wont-sleep">for kids</a>, and the value of a consistent sleep schedule can’t be overstated. Your body thrives on routine, so a regular sleep and wake time helps your body understand when it’s time to wind down and when it’s time to rise.</p><h3><strong>2. Create a sleep-friendly environment</strong></h3><p>Consider your sleeping environment. Is it dark, quiet, and cool? These are ideal conditions for restful sleep. Also, consider investing in a comfortable mattress and pillows. These small changes can significantly impact your sleep quality and help prevent bad dreams.</p><h3><strong>3. Take active steps to manage your stress during the day</strong></h3><p>If stress or anxiety is the culprit behind your nightmares, it’s important to tackle the cause head-on. Implementing stress management techniques, such as deep breathing exercises or guided mindfulness practices (such as this one), can work wonders in <a href="https://www.calm.com/player/-m0CCVJMwt">soothing your mind</a> before bed.</p><h3><strong>4. Avoid stimulating activities before bed</strong></h3><p>Try to wind down at least an hour before bed. This means turning off the TV, stepping away from work, and switching off any other devices. This quiet time allows your mind to transition smoothly into sleep mode.</p><h3><strong>5. Exercise during the day</strong></h3><p>Regular physical activity can promote better sleep, helping to prevent nightmares. Just ensure you don’t exercise too close to bedtime, as it can have the opposite effect.</p><h3><strong>6. Avoid heavy meals before bed</strong></h3><p>As mentioned before, late-night snacking, especially heavy or very spicy food, can lead to bad dreams. Finish eating at least a few hours before hitting the hay.</p><h3><strong>7. Relax before falling asleep</strong></h3><p>Incorporate relaxing activities into your bedtime routine. This could include reading, listening to relaxing music, or practicing <a href="https://www.calm.com/app/program/6pK1XEW84N">mindfulness exercises</a>. It’s all about calming your mind and preparing your body for sleep.</p>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+  
+    
+    
+      
+        
+        
+        
+        
+          <blockquote> <a href="https://www.instagram.com/reel/Cocj95doWDR/?utm_source=ig_embed&amp;utm_campaign=loading">       View this post on Instagram            </a><p><a href="https://www.instagram.com/reel/Cocj95doWDR/?utm_source=ig_embed&amp;utm_campaign=loading">A post shared by Calm (@calm)</a></p></blockquote> 
+        
+        
+        
+      
+    
+  
+  
+    
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  <h3><strong>8. Talk about whatever’s troubling you</strong></h3><p>If something’s bothering you, don’t let it stew in your mind. Talking it out with a trusted friend, family member, or professional can help release some of the burden.</p><h3><strong>9. Limit alcohol and caffeine</strong></h3><p>Both these substances can disrupt your sleep cycle and might increase the likelihood of having nightmares. Try limiting them or avoiding them altogether.</p><h3><strong>10. Review your medications</strong></h3><p>If you suspect your medication is causing nightmares, discuss it with your healthcare provider. They might be able to adjust the dosage or suggest alternatives.</p><p>Implementing these strategies can make a big difference in preventing nightmares and improving the overall quality of your sleep. Everyone deserves a <a href="https://www.calm.com/blog/sleep-superpower-playbook">good night’s sleep</a>, and you’re no exception. Remember, it’s not about perfection but progress, so celebrate small victories and keep experimenting to find out what works best for you.</p><h2>How to go back to sleep after a nightmare</h2><p>The biggest challenge after waking up from a nightmare is often trying to calm your body and mind enough so you can get back to sleep. If you’ve ever found yourself wide awake at 3 a.m., staring at the ceiling, you know exactly what we’re talking about.</p><p>So how exactly do you drift back into the land of nod once you’ve been rudely awakened by a nightmare? Here are seven strategies that might help you fall back asleep after a bad dream.</p><h3><strong>1. Deep breathing exercises</strong>&nbsp;</h3><p>Deep, <a href="https://www.calm.com/player/9ikRv2slmt?share_token=v2I37iBSYGwSMOR788-OFZxQahSDp33LXmVnNMdTVsZL3Jk_Aw7t7y98UEbL-ybOfJuPoh1Wd0Gl9_JVan7mfP1SqmfjtzijO-28UZM_8_wrPQ">controlled breathing</a> can be a powerful tool in helping to calm your mind and body. The practice works by shifting your focus away from any disturbing images from your nightmare and redirects it onto the rise and fall of your breath. An easy-to-follow technique is the 4-7-8 breathing method, where you inhale for 4 counts, hold your breath for 7 counts, and exhale for 8 counts.</p><h3><strong>2. Try progressive muscle relaxation</strong></h3><p>This <a href="https://www.calm.com/app/program/mGnSh1CiB2">technique</a> involves tensing and then releasing different muscle groups in your body. Start from your toes and work up to your head (or vice versa). This can help you feel more grounded and take your mind off the images or content of your nightmare.</p><h3><strong>3. Visualize yourself somewhere soothing</strong>&nbsp;</h3><p>Picture a peaceful, calming scene. It could be a <a href="https://www.calm.com/player/9CvvX-oLYW?share_token=v2an-ySl_8it_Nb9zzcie6EAhBFH298v2mUyU_0ifv0LkwJ6bKAVJuZzyuCbh12zeMNf0Z8dKlLQth4zi-MkBCqPrByYcrv3kAUINZAs1zWmCg">beautiful beach</a>, a serene forest, or any place that brings you joy and tranquility. Focusing on images that make you feel relaxed and at ease can steer your mind away from whatever you were dreaming about.</p><h3><strong>4. Do something comforting</strong></h3><p>If you’re finding it hard to fall back asleep, <a href="https://blog.calm.com/blog/7-sleep-myths-busted">get out of bed</a> and do something relaxing. This could be reading a book, listening to calm music, or doing a low-intensity activity like drawing. Do whatever feels soothing to you, and try to do it somewhere quiet and in low-lighting so your body can ease into relaxation and sleep. If in doubt, try listening to a Sleep Story.&nbsp;</p>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+      
+    
+    
+      
+        
+      
+    
+    
+    
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+    
+  
+
+
+  
+  <h3><strong>5. Keep a night light on</strong></h3><p>If you wake up scared, turning on a soft, gentle light can feel comforting. In some ways, it feels like you’re banishing the darkness from your dream, and being able to see your surroundings makes you feel safer and more at ease. Just make sure its not too bright or it may, ironically, end up disrupting your sleep.</p><h3><strong>6. Keep a dream journal</strong></h3><p>Writing down whatever happened in your nightmare can be therapeutic. In some ways, the process of writing helps to drain away the power the bad dream has over your emotions. Keep a notebook and pen beside your bed and if a nightmare wakes you up, write it down. <a href="https://blog.calm.com/blog/dream-journal">Here’s a Dream Journal</a> you can download and print out.</p><h3><strong>7. Take a mindful moment</strong></h3><p>If you’ve been startled awake by a nightmare, take a moment to <a href="https://www.calm.com/player/tJsV3cnG2x">center yourself</a>. Notice your surroundings, the feeling of the sheets, the sounds you can hear. This can bring you back to reality and help separate the images of your nightmare from the safety of your bedroom. Repeat to yourself: “I am here. I am safe.”</p><p>Finding it difficult to fall back to sleep after a nightmare is perfectly normal. Don’t pressure yourself to get back to sleep immediately. Take your time, be gentle with yourself, and use the techniques above to help guide your mind and body back into a state of ease.&nbsp;</p><p>Here at Calm, we’re committed to helping you cultivate a more peaceful state of mind during your waking hours and as you journey through the world of sleep.</p>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+    
+
+    
+
+    
+      
+
+        
+      
+        <a href="https://calm.onelink.me/GyG4/o9tukrg6/?utm_campaign=evergreen&amp;utm_medium=organic&amp;utm_source=blog">
+          
+      
+        
+          
+          
+          
+          
+          
+          
+          <img alt="" src="https://images.squarespace-cdn.com/content/v1/57b5ef68c534a5cc06edc769/50a37e80-6b8d-4ec0-8efa-b2620ec38bbb/try-calm-for-free.png?format=1000w">
+        
+      
+    
+        </a>
+      
+
+      
+        
+
+          
+        
+      
+    
+      
+    
+
+    
+
+
+  
+
+  
+
+&nbsp;
+  
+  <h2>Your questions about nightmares, answered</h2><h3>What triggers nightmares?</h3><p>Nightmares can be triggered by a variety of factors. Common triggers include stress or anxiety, late-night eating, exposure to disturbing content like horror films or books, traumatic experiences, substance use like alcohol or drugs, certain medications, and sleep disorders.</p><h3>What causes nightmares, and how do you prevent them?</h3><p>Similar to the triggers mentioned above, these factors can cause nightmares. Preventing nightmares often involves addressing these underlying causes. This could mean establishing a healthy sleep routine, creating a sleep-friendly environment, managing stress, avoiding stimulating activities before bed, exercising regularly, avoiding heavy meals before bedtime, and talking about what’s troubling you. Remember that everyone’s different, and what works best for you might differ from what works best for others.</p><h3>Is it okay to have nightmares every night?</h3><p>While occasional nightmares are normal, having them every night is not typical and can be distressing. Frequent nightmares can interfere with your sleep quality and overall well-being. If you’re experiencing nightmares regularly, speaking to a healthcare provider or a mental health professional may be beneficial to identify any underlying issues that might need addressing.</p><h3>Do you ever stop having nightmares?</h3><p>Yes, many people experience nightmares less frequently as they age. However, some adults do continue to have nightmares. Addressing the underlying causes of nightmares, like stress or anxiety, can significantly reduce their frequency. Remember, occasional bad dreams are normal, but if they are causing significant distress or affecting your sleep, it’s worth discussing this with a healthcare provider.</p><p>Nightmares can be challenging, but understanding their triggers and implementing strategies to manage them can help you reclaim a peaceful night’s sleep.&nbsp;</p><h3><strong>What causes nightmares to happen repeatedly?</strong></h3><p>Frequent nightmares can be caused by high stress levels, anxiety disorders, PTSD, sleep disorders like sleep apnea, or even certain medications. Alcohol and late-night eating can also disrupt REM sleep, where most nightmares occur. If they persist nightly, it might be worth speaking to a medical or mental health professional.</p><h3><strong>How can I stop having bad dreams every night?</strong></h3><p>To break the cycle of nightly nightmares, focus on improving sleep hygiene—stick to a consistent sleep schedule, avoid screens and heavy meals before bed, and create a calming wind-down routine. You might also consider meditation or breathing exercises before bed. If the nightmares are rooted in trauma, therapy like CBT-I or imagery rehearsal therapy may help.</p><h3><strong>Is there any medication for nightmares?</strong></h3><p>Yes, certain medications can help reduce the frequency and intensity of nightmares, especially in cases linked to PTSD or anxiety. Prazosin, for example, is sometimes prescribed off-label for this purpose. Always talk to your doctor before considering medication for sleep-related issues.</p><h3><strong>Why do I keep waking up after bad dreams?</strong></h3><p>Nightmares activate the body’s stress response, which can jolt you out of sleep with increased heart rate and adrenaline. If you wake up after a bad dream, grounding exercises like deep breathing or progressive muscle relaxation can help you calm down and return to sleep more easily.</p><h3>I had a nightmare and now I'm scared to sleep. What should I do?</h3><p>Fear of sleep after a nightmare is common. Your body may still be on alert, so lying down can feel unsafe.</p><p>Start by slowing your breathing and naming a few things you can see in the room. A soft light is fine if it helps you feel safe. You don’t have to fall asleep right away. Sitting up with a book in low light until you feel calm is okay, and dropping the pressure to sleep often eases the fear.</p><p>If the fear comes back the next night, keep your bedtime routine the same and avoid replaying the dream in your head. Writing it down earlier in the day can help. Fear that keeps returning, or frequent nightmares, is worth raising with a doctor or mental health professional.</p><h3><strong>What’s the difference between bad dreams and night terrors?</strong></h3><p>Bad dreams (nightmares) happen during REM sleep and usually involve vivid, disturbing scenarios that you remember upon waking. Night terrors occur during non-REM sleep and involve sudden arousals, often with screaming or thrashing, but the person usually doesn’t remember them. Night terrors are more common in children but can affect adults too.</p>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+  
+    
+
+    
+
+
+
+  
+
+
+  
+  <h2>Calm your mind. Change your life.</h2><p>Nightmares are difficult. But help getting back to sleep after a bad dream is easy.  The Calm app puts the tools to feel better in your back pocket, with personalized content to manage stress and anxiety, get better sleep, and feel more present in your life. </p>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+    
+
+    
+
+    
+      
+
+        
+      
+        
+          
+      
+        
+          
+          
+          
+          
+          
+          
+          <img alt="" src="https://images.squarespace-cdn.com/content/v1/57b5ef68c534a5cc06edc769/4cff4b5d-cb99-4f3e-9195-ef256508ef80/try-calm-for-free.png?format=1000w">
+        
+      
+    
+        
+      
+
+      
+        
+
+          <p>Images: Getty</p>
+        
+      
+    
+      
+    
+
+    
+
+
+  
+
+  
+
+&nbsp;</div>
+</article>
+<article class="article-card" id="artikel-1133">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "SEC Announces Fiscal Year 2027 Examination Priorities", "image": [], "datePublished": "2026-10-23T10:10:00-04:00", "dateModified": "2026-10-23T10:10:00-04:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-1133"}</script>
+    <h2>SEC Announces Fiscal Year 2027 Examination Priorities</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.sec.gov/newsroom/press-releases/2026-109-sec-announces-fiscal-year-2027-examination-priorities" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">The Securities and Exchange Commission today announced the Division of Examinations’ Fiscal Year 2027 examination priorities. The annual report identifies key areas of focus as the Division carries out its mission to promote compliance, prevent fraud,…</div>
+</article>
+<article class="article-card" id="artikel-3937">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How to proof bread in the oven: Common challenge, simple solution.", "image": ["https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2026-09/how%20to%20proof%20bread%20in%20oven.jpg?itok=PebUg4wv"], "datePublished": "2026-10-23T10:00:00-0400", "dateModified": "2026-10-23T10:00:00-0400", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-3937"}</script>
+    
+    <div class="article-meta">
+        📅 2026-10-23 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.kingarthurbaking.com/blog/2026/10/23/how-to-proof-bread-in-oven" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2026-09/how%20to%20proof%20bread%20in%20oven.jpg?itok=PebUg4wv" alt="How to proof bread in the oven: Common challenge, simple solution." loading="lazy"><img alt="Finger poking a loaf of proofing bread dough" src="https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2026-09/how%20to%20proof%20bread%20in%20oven.jpg?itok=PebUg4wv">
+
+<p>During proofing, bread and other yeasted doughs do best in a temperature-controlled, humid, draft-free environment. Your kitchen counter may not cut it (especially in colder months), but is there a corner of your kitchen that fits that description? Yes, your oven — and you don’t even need to fire it up!&nbsp;</p>
+
+The post <a href="https://www.kingarthurbaking.com/blog/2026/10/23/how-to-proof-bread-in-oven">How to proof bread in the oven: Common challenge, simple solution.</a> appeared first on <a href="https://www.kingarthurbaking.com/blog">the King Arthur Blog</a>.</div>
+</article>
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+<article class="article-card" id="artikel-2890">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "AI is stealing students’ ability to think critically–Journalism 101 may be an antidote", "image": ["https://www.eschoolnews.com/files/2026/10/critical-thinking-ai-students.png"], "datePublished": "2026-10-23T10:00:00+00:00", "dateModified": "2026-10-23T10:00:00+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-2890"}</script>
+    <h2>AI is stealing students’ ability to think critically–Journalism 101 may be an antidote</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp;
+        <a href="https://www.eschoolnews.com/digital-learning/2026/10/23/ai-is-stealing-students-ability-to-think-critically-journalism-101-may-be-an-antidote/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://www.eschoolnews.com/files/2026/10/critical-thinking-ai-students.png" alt="AI is stealing students’ ability to think critically–Journalism 101 may be an antidote" loading="lazy"><img alt="Responsibilities that require human discretion and knowledge shouldn’t be trusted completely to AI--we need critical thinking skills." src="https://www.eschoolnews.com/files/2026/10/critical-thinking-ai-students.png">
+<p>The risks of using generative Artificial Intelligence in education outweigh the benefits. That’s the warning in a seminal report from the<a href="https://www.brookings.edu/articles/a-new-direction-for-students-in-an-ai-world-prosper-prepare-protect/"> Brookings Institution’s Center for Universal Education</a>.&nbsp;</p>
+
+
+
+<p>After a year of study, focus groups and interviews with 500 students, parents and educators, Brookings warns that overreliance on AI could stunt skills like critical thinking before students have had the chance to learn them.<a href="https://www.apa.org/monitor/2026/07-08/ai-job-skills-thinking"> Studies already show</a> there’s cause for concern.&nbsp;</p>
+
+
+
+<p>It doesn’t have to be this way. Brookings’ researchers note that AI technology can enhance student learning instead of supplanting it — if young people learn to think for themselves first. &nbsp;</p>
+
+
+
+<p>Journalism class is the perfect place for students to learn AI-proof critical thinking skills. &nbsp;</p>
+
+
+
+<p>I teach journalism at Jupiter Middle School in Palm Beach County. In our classroom-turned-newsroom, students analyze information, verify facts and consider different viewpoints for every story they publish. They wrestle with ethical dilemmas, use their own judgement and write their own copy. &nbsp;</p>
+
+
+
+<p>They rely on their own brain power instead of offloading difficult tasks to a chatbot. In the process, they’re not only learning how to think for themselves but also getting an education in what it means to be an informed and engaged member of their community.  &nbsp;</p>
+
+
+
+<p>On deadline day, our classroom is buzzing. Kids are running around asking for a photo they can’t find, checking out a press pass so they can speak to a source and get a better quote, and our layout editor is frantically trying to ensure that the cropping of a photo doesn’t distort the image — all things journalists regularly do. &nbsp;</p>
+
+
+
+<p>But well before publishing a word, students start with learning basic news literacy skills. &nbsp;</p>
+
+
+
+<p>Sixth graders learn to evaluate the credibility of sources, understanding why a TikTok post may not be the most reliable place to gather facts. They learn to recognize bias by looking for emotionally charged words, noting whose viewpoints might be missing from a piece and comparing how different sources frame the same facts. They come to understand why accuracy matters — because a journalist’s credibility is all they have. It’s all critical thinking in action. &nbsp;</p>
+
+
+
+<p>They continue building these skills in seventh and eighth grade, when they work in a real newsroom where facts, verification and ethical decisions are integral to every publication. &nbsp;</p>
+
+
+
+<p>These are responsibilities that require human discretion and knowledge. They shouldn’t be trusted completely to AI. They are also the kinds of skills that bring us closer as a community. &nbsp;</p>
+
+
+
+<p>Students see firsthand that credible information doesn&#8217;t happen by accident; it requires responsibility and care. When tweens and teens are trusted to produce real journalism, they begin to understand their role in contributing thoughtfully to their community.&nbsp;</p>
+
+
+
+<p>Today, many of us are living in separate, screen-based realities. We spend hours scrolling social feeds or chatting with bots instead of interacting in real life. Our filter bubbles can prevent us from any exposure to ways of thinking and living that are different from our own. &nbsp;</p>
+
+
+
+<p>In journalism class, I’m always asking my students to debate complicated issues and consider other perspectives. Journalism ethics call on reporters to be fair and nuanced, which is only possible when you purposely seek out all sides of a story.&nbsp;</p>
+
+
+
+<p>Last year, one of my students wanted to investigate the effectiveness of practicing lockdown drills, but she was genuinely nervous about writing the story. She knew that school safety is an especially sensitive subject — Marjory Stoneman Douglas High School in Parkland, where 17 people died in a 2018 mass shooting, is just an hour’s drive from our school. She worried that questioning a practice designed to protect students might be perceived as criticizing it.&nbsp;</p>
+
+
+
+<p>I reminded her that the job of a journalist isn’t to decide whether the drills are effective. Her job was to ask a legitimate question and then do the work necessary to answer it responsibly. She researched the purpose and effectiveness of safety drills, sought out credible information like case studies and statistics and considered perspectives beyond her own experience as a student.&nbsp;</p>
+
+
+
+<p>I want my students to be informed, engaged citizens when they leave this class. I want them to use their journalism skills to research issues, seek out nuance and make informed decisions. I want them to think for themselves about what’s important to them and why.  &nbsp;</p>
+
+
+
+<p>AI is moving quickly into our lives and into our classrooms. Our kids need to stay ahead of it. We need to invest our educational resources to ensure every student learns to think critically. &nbsp;</p>
+
+
+
+<p>News literacy education and journalism class are the perfect places to teach these skills. The goal isn&#8217;t to raise a generation of journalists. It&#8217;s to equip Gen Alpha with the ability to ask the right questions and listen thoughtfully to the answers — skills that make us human and shouldn’t be handed over to bots. &nbsp;</p></div>
+</article>
+<article class="article-card" id="artikel-2067">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "The Asterisk on Robinhood Chain’s $51M Win Over Ethereum", "image": [], "datePublished": "2026-10-23T09:17:14+00:00", "dateModified": "2026-10-23T09:17:14+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-2067"}</script>
+    
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Business</strong> &nbsp;|&nbsp;
+        <a href="https://nulltx.com/the-asterisk-on-robinhood-chains-51m-win-over-ethereum" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><p><i><b><strong>Take 12 days out of </strong></b></i><a href="https://nulltx.com/robinhood-layer-2-is-growing-faster-than-any-chain-launched-in-2026"><i><b><strong>Robinhood Chain's first quarter,</strong></b></i></a><i><b><strong> and the "3-month-old L2 beat Ethereum" headline turns around. </strong></b></i></p><p><span>For the other 80 days, Robinhood Chain earned about $166,000 a day in </span><a href="https://nulltx.com/paper-volume-real-fees-the-single-tx-swaps-distorting-on-chain-market-dashboards"><span>network fees.</span></a><span> Ethereum averaged about $446,000.</span></p><p><span>ARK Invest's numbers are accurate. Robinhood Chain did generate about $51 million in Q3 against Ethereum's roughly $41 million. But the coverage repeated the comparison without checking how the $51 million was made or who ends up with it. Going back to the underlying data, and the comparison holds up much less well than the headline suggests.</span></p><h2><span>The Headline: A 3-Month-Old Chain Beats Ethereum</span></h2><p><span>ARK's </span><a href="https://assets.arkinvest.com/media-8e522a83-1b23-4d58-a202-792712f8d2d3/c493bb1c-4d4e-4b64-8c19-55081b525238/The%20DeFi%20Quarterly%20(Q3,%202026).pdf"><span>DeFi Quarterly for Q3 2026</span></a><span> charts "Network Real Economic Value by Blockchain". In it, Robinhood Chain logged about </span><b><strong>$51 million</strong></b><span> in its first quarter, while Ethereum logged about </span><b><strong>$41 million</strong></b><span>, down roughly </span><b><strong>35%</strong></b><span> from the previous quarter.</span></p><p><img alt="The Asterisk on Robinhood Chain’s $51M Win Over Ethereum" src="https://cdn.nulltx.com/uploads/1792746781363-067jzkjzc7v9.jpg"><span>The comparison spread quickly. A chain that launched on July 1 beating the network that secures most of DeFi made an easy headline. ARK's wider data has more context: total network value across the chains it tracks rose about </span><b><strong>24%</strong></b><span> to roughly </span><b><strong>$349 million</strong></b><span>, the first quarterly increase in five quarters, though still about </span><b><strong>47%</strong></b><span> below a year earlier. Robinhood Chain processed about </span><b><strong>$65 billion</strong></b><span> in DEX volume, fourth in ARK's dataset, and hosted about </span><b><strong>$13.7 billion</strong></b><span> in tokenized equities.</span></p><h2><span>What ARK Is Actually Measuring</span></h2><p><span>ARK's DeFi Quarterly glossary defines Real Economic Value (REV) as "the total value a network generates consisting of both in-protocol transaction fees and out-of-protocol tips," using data from Blockworks Research.</span></p><p><span>In other words, both figures measure the same thing: </span><b><strong>gross fees users paid to use the chain</strong></b><span>. Robinhood Chain's $51 million matches the </span><b><strong>$51.0 million in user network fees</strong></b><span> reported in </span><a href="https://www.growthepie.com/quick-bites/robinhood-quarterly-report-2026-q3"><span>growthepie's Q3 review of the chain</span></a><span>. It's not app revenue. growthepie puts the revenue of apps on Robinhood Chain separately, at </span><b><strong>$591.4 million</strong></b><span>.</span></p><p><span>So ARK didn't mix up its metrics. The trouble is that the same metric means very different things on these two chains. The Q3 number doesn't show that.</span></p><h2><span>Twelve Days Produced Three-Quarters of the Fees</span></h2><p><span>growthepie's report has the detail the headline leaves out. A </span><b><strong>12-day surge, from August 30 to September 10</strong></b><span>, pushed median transaction costs to </span><b><strong>31 times</strong></b><span> their pre-surge average. That surge produced </span><b><strong>74% of the quarter's fees</strong></b><span>. growthepie names Relay as the largest tracked fee payer.</span></p><p><img alt="The Asterisk on Robinhood Chain’s $51M Win Over Ethereum" src="https://cdn.nulltx.com/uploads/1792746775683-z3qtccin3bf.jpg"><span>Here's what that means in dollars:</span></p><ul><li><b><strong>During the surge (12 days):</strong></b><span> about </span><b><strong>$37.7 million</strong></b><span>, or roughly </span><b><strong>$3.1 million a day</strong></b></li><li><b><strong>The rest of the quarter (80 days):</strong></b><span> about </span><b><strong>$13.3 million</strong></b><span>, or roughly </span><b><strong>$166,000 a day</strong></b></li><li><b><strong>Ethereum, over the full 92 days:</strong></b><span> about </span><b><strong>$41 million</strong></b><span>, or roughly </span><b><strong>$446,000 a day</strong></b></li></ul><p><span>Outside the surge, Robinhood Chain earned about </span><b><strong>37%</strong></b><span> of Ethereum's daily rate. At that pace, a full quarter would come to about </span><b><strong>$15 million</strong></b><span>, well under Ethereum's $41 million. The "out-earned Ethereum" result depends almost entirely on 12 days when fees jumped to 31 times normal.</span></p><p><span>That doesn't make the surge fake. Users paid those fees. But the surge came from congestion and higher prices, not steady growth. Across the quarter's </span><b><strong>793.7 million transactions</strong></b><span>, users paid about </span><b><strong>6.4 cents</strong></b><span> per transaction on average. Median costs that briefly rose to 31 times normal aren't a pricing model an exchange-backed chain will want to repeat.</span></p><h2><span>Same Label, Different Economics</span></h2><p><span>Even with the same metric, the two figures go to very different places.</span></p><p><b><strong>On Ethereum,</strong></b><span> most of the $41 million is the base fee, which is </span><b><strong>burned</strong></b><span>. That reduces ETH supply and benefits every holder. The rest goes as priority fees and tips to thousands of independent validators. Ethereum's REV is close to a public measure of what the network's users pay.</span></p><p><b><strong>On Robinhood Chain,</strong></b><span> an Arbitrum Orbit rollup, fees go to the chain's sequencer, which Robinhood operates. In practice, the $51 million is a company's </span><b><strong>gross receipts</strong></b><span>. Some of it goes back to Ethereum to pay for posting data and settling transactions there, and the rest is Robinhood's margin. As coverage of the report noted, how much reaches Robinhood's income statement is still unclear. The company's earnings report on October 27 may answer that.</span></p><p><span>So on one side, you have fees paid to a decentralized base layer, mostly destroyed. On the other, you have gross receipts for one company, before costs. Both count as "network value," but they aren't the same kind of income.</span></p><h2><span>What the Comparison Leaves Out</span></h2><p><span>Three more things make the head-to-head weaker:</span></p><ul><li><b><strong>Ethereum's low fees are by design.</strong></b><span> Ethereum has spent two years making its base layer cheaper and moving activity to rollups. A lower fee total partly reflects that strategy.</span></li><li><b><strong>Some of Robinhood's fees go to Ethereum.</strong></b><span> As a rollup, Robinhood Chain pays Ethereum for data availability and settlement. That cost is included in Robinhood's $51 million. Whether ARK also counts Ethereum's share of it or not, either way, Robinhood's figure includes a payment to the chain it's being compared with.</span></li><li><b><strong>One quarter is a short window.</strong></b><span> Robinhood Chain's numbers come from its launch quarter, and much of the activity was concentrated in a short period. Stablecoin supply on the chain did grow from </span><b><strong>$102.3 million to $1.07 billion</strong></b><span>, passing $1 billion on September 7, which is a more durable sign of growth than a fee spike.</span></li></ul><h2><span>A Fairer Way to Read the Numbers</span></h2><p><span>The accurate version of the headline is less dramatic: in its first quarter, Robinhood Chain charged its users more in total than Ethereum's base layer did. About three-quarters of that came from a 12-day congestion spike, and the money went to Robinhood's sequencer, not to a decentralized validator set.</span></p><p><span>That's still a strong debut. Robinhood Chain's stablecoin growth, $13.7 billion in tokenized equities and nearly 800 million transactions are all real. But "beat Ethereum" tells you more about one busy fortnight in early September than about which chain has the stronger business. Q4 will be the real test: without a surge, can Robinhood Chain's fees come close to Ethereum's on an ordinary day?</span></p><p><i><b><strong>Disclosure:</strong></b></i><i><em> This is not trading or investment advice. Always do your research before buying any cryptocurrency or investing in any services. Follow us on X </em></i><a href="https://x.com/nulltxnews"><i><em>@nulltxnews</em></i></a><i><em>.</em></i></p></div>
+</article>
+<article class="article-card" id="artikel-3143">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Podcast Episode 760: Flammable Water, Framed Floor over Concrete, and Moving vs. Adding On", "image": [], "datePublished": "2026-10-23T09:00:34+00:00", "dateModified": "2026-10-23T09:00:34+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-3143"}</script>
+    <h2>Podcast Episode 760: Flammable Water, Framed Floor over Concrete, and Moving vs. Adding On</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.finehomebuilding.com/2026/10/23/podcast-episode-760-flammable-water-framed-floor-over-concrete-and-moving-vs-adding-on" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">Listeners write in about flammable water and the FHB Summit and ask questions about a framed floor over concrete and adding on to a small house.</div>
+</article>
+<article class="article-card" id="artikel-1677">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "MIBR GC beat FENNEL Female to win Game Changers Championship playoff opener", "image": [], "datePublished": "2026-10-23T08:56:37+00:00", "dateModified": "2026-10-23T08:56:37+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-1677"}</script>
+    
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://esportsinsider.com/2026/10/mibr-gc-beat-fennel-female-to-win-game-changers-championship-playoff-opener" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+
+VCT Game Changers Championship 2026 · Playoffs · 22 Oct 2026
+
+<span>FENNEL Female</span><span>0 – 2</span><span>MIBR GC</span>
+
+Bo3 · 1: MIBR.F · 2: MIBR.F
+
+<p>MIBR GC beat FENNEL Female 2-0 on Thursday 22 October in the first upper-bracket match of the VCT Game Changers Championship 2026 playoffs. The best-of-three ended in two maps, and MIBR GC now face G2 Gozen in their next match.</p>
+<p>The opening map lasted 38 minutes and the second 37. FENNEL Female did not take a map in either.</p>
+<h2>Third against 26th in the power rankings</h2>
+<p>The result followed the Elo power rankings. MIBR GC are 3rd with a rating of 1824 and a record of 43-17 from 60 rated matches. FENNEL Female are 26th on 1721, with a 23-11 record from 34 rated matches.</p>
+<p>This was the higher-rated team winning, not an upset. A clean sweep against a side with FENNEL Female&#8217;s recent results still counts as <a href="https://liquipedia.net/valorant/MIBR_GC">a strong start for MIBR GC</a> on the opening day of the playoffs.</p>
+<h2>MIBR GC build on their Last Chance Qualifier recovery</h2>
+<p>MIBR GC did not have an easy route to this event. At the VCT Game Changers Brazil Final Stage 2026 they lost 1-2 to Team Liquid Brazil and 2-3 to Evil Geniuses GC. Their path to the Championship then went through the VCT Game Changers Americas Last Chance Qualifier 2026, where they started with a 0-2 defeat to FlyQuest RED.</p>
+<p>They have not lost a series since. MIBR GC beat Akave Esports Black 2-0, then won a rematch with FlyQuest RED 3-2. The win over FENNEL Female extends that unbeaten run into the Championship itself.</p>
+<p></p>
+
+
+<blockquote>
+<p>VALORANT Game Changers <br>Championship 2026</p>
+<p>DAY 1 MATCH 1｜BO3  <br>vs MIBR GC<br>0-2 DEFEAT</p>
+<p>Tough start. We go again.<br>Thank you for your support.<a href="https://x.com/hashtag/FLWIN?src=hash&amp;ref_src=twsrc%5Etfw">#FLWIN</a> <a href="https://x.com/hashtag/VCTGameChangers?src=hash&amp;ref_src=twsrc%5Etfw">#VCTGameChangers</a><a href="https://x.com/hashtag/%E3%82%AB%E3%83%A9%E3%82%B3%E3%83%B3%E3%83%9B%E3%83%86%E3%83%A9%E3%83%90?src=hash&amp;ref_src=twsrc%5Etfw">#カラコンホテラバ</a> <a href="https://x.com/hashtag/ForFutureProject?src=hash&amp;ref_src=twsrc%5Etfw">#ForFutureProject</a> <a href="https://t.co/FBeW5wlWdh">pic.twitter.com/FBeW5wlWdh</a></p>
+<p>&mdash; FENNEL (@FENNEL_official) <a href="https://x.com/FENNEL_official/status/2113354274709344466?ref_src=twsrc%5Etfw">October 22, 2026</a></p></blockquote>
+<p></p>
+
+<p></p>
+<h2>FENNEL Female&#8217;s Pacific form checked again</h2>
+<p>FENNEL Female arrived with a strong record from their own region. They beat Sasanqua 3-0 at the VCT Game Changers Japan Split 2 2026. At VCT Game Changers Pacific 2026 they then won 2-0 against wiwiwi, 2-1 against Gen.G GC and 2-0 against Team Falcons VEGA.</p>
+<p>That run ended in a 2-3 rematch defeat to Gen.G GC. This loss to MIBR GC makes it consecutive series defeats for the Japan-based team, who could not take a map from one of the highest-rated teams in the field.</p>
+<h2>G2 Gozen next for MIBR GC on Saturday</h2>
+<p>MIBR GC&#8217;s next match in the upper bracket is against G2 Gozen on Saturday 24 October. The event runs until 1 November.</p>
+<p>The other opening upper-bracket match was also a sweep. SK Nebula beat Nova Esports GC 2-0, so both of the first playoff series at the Championship ended without a deciding map.</p>
+<p>The post <a href="https://esportsinsider.com/2026/10/mibr-gc-beat-fennel-female-to-win-game-changers-championship-playoff-opener">MIBR GC beat FENNEL Female to win Game Changers Championship playoff opener</a> appeared first on <a href="https://esportsinsider.com">Esports Insider</a>.</p></div>
+</article>
+<article class="article-card" id="artikel-2876">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Building Glassdoor Recruiter: The story and technology behind smarter job matching", "image": ["https://blog.glassdoor.com/site-us/wp-content/uploads/sites/2/2026/10/2026_Glassdoor-Recruiter-Blog-Posts-Hero-Images-V3-Low_1942x1297.jpg?w=240"], "datePublished": "2026-10-23T08:42:17+00:00", "dateModified": "2026-10-23T08:42:17+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-2876"}</script>
+    <h2>Building Glassdoor Recruiter: The story and technology behind smarter job matching</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp;
+        <a href="https://www.glassdoor.com/blog/glassdoor-recruiter-job-matching-product-story/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><img src="https://blog.glassdoor.com/site-us/wp-content/uploads/sites/2/2026/10/2026_Glassdoor-Recruiter-Blog-Posts-Hero-Images-V3-Low_1942x1297.jpg?w=240" alt="Building Glassdoor Recruiter: The story and technology behind smarter job matching" loading="lazy">Discover the product story behind how Glassdoor Recruiter delivers smarter, quality-first job matching for job seekers and employers.</div>
+</article>
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+<article class="article-card" id="artikel-3831">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "New Research Strengthens the Case for Emotional Dysregulation in ADHD Criteria", "image": [], "datePublished": "2026-10-23T08:33:02+00:00", "dateModified": "2026-10-23T08:33:02+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-3831"}</script>
+    <h2>New Research Strengthens the Case for Emotional Dysregulation in ADHD Criteria</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp;
+        <a href="https://www.additudemag.com/emotional-dysregulation-subtype-adhd/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><p><a href="https://www.additudemag.com/product/winter-2026-issue-of-additude-magazine-pdf-edition/"><img src="/wp-content/uploads/2026/10/get-full-issue-banner-320x70-x2-winter-2026-yellow-1.png"></a>When the <em>Diagnostic and Statistical Manual of Mental Disorders (DSM-5)</em> was updated in 2022, officials believed that research was lacking to expand ADHD’s definition to include the common and extremely impairing symptom of emotional dysregulation. Consequently, the overwhelming and uncontrollable emotions reported by many patients remain largely unrecognized as ADHD manifestations.</p>
+<p>Now research appears to be catching up to patient reports.</p>
+<p>A new landmark study has revealed three ADHD subtypes that reflect neurobiological differences: predominantly inattentive; predominantly hyperactive/impulsive; and the new severe-combined, which is marked by <a href="https://www.additudemag.com/desr-adhd-emotional-regulation/">emotional dysregulation</a>.<a href="#footnote1">1</a></p>
+<p>Using neuroimaging and computational modeling to map the pathways of ADHD, researchers found that the severe-combined type had 45 areas of brain abnormality tied to emotion and control compared with 26 each for the two other types. The study, which analyzed 1,154 brain scans of children and adolescents with ADHD, was published recently in <em>JAMA Psychiatry</em>.</p>
+<h3>New Presentation, New Treatment?</h3>
+<p>The findings are “an example of recent insights emerging from <a href="https://www.additudemag.com/neuroimaging-adhd-findings-limitations-promise/">neuroimaging</a> that may impact clinical care, which has been an elusive goal,” says F. Xavier Castellanos, M.D., professor emeritus of child and adolescent psychiatry at New York University’s Grossman School of Medicine. He was part of the working group that contributed to the <em>DSM-5</em>.</p>
+<p><em>[<a href="https://www.additudemag.com/download/anger-management-emotional-regulation-skills-adhd/?src=embed_link">Get This Free Download: Emotional Regulation &amp; Anger Management Scripts</a>]</em></p>
+<p>“Still, it’s too early to assume that their intriguing results are real in the sense of replicating repeatedly in independent datasets, particularly by investigators who are not allied or collaborating with the original research team,” says Castellanos. He, like the study authors, calls for prospective studies to validate their biotypes and determine whether they may influence treatment.</p>
+<p>Findings that reveal a new severe-combined subtype may come as no surprise to the thousands of parents of children with ADHD, and adults with the condition, who have named emotional dysregulation as the most impairing feature of ADHD in <em>ADDitude</em> surveys.</p>
+<p>But, as David Anderson, Ph.D., senior psychologist at the <a href="https://childmind.org/care/areas-of-expertise/adhd-and-behavior-disorders-center/">ADHD and Behavior Disorders Center</a> at the Child Mind Institute, points out, parents’ anecdotal feedback precedes scientific validation.</p>
+<p>“Finding evidence of a subtype in the brain leaves open questions about the balance of nature versus nurture. Is there a biological basis for subtypes and is it reliable across the span of development?” Anderson asks. “Emotion dysregulation can be biological for kids who are more prone to emotional behavior from an early age, while some are frustrated with the world due to negative feedback they’ve gotten since kindergarten, so it’s environmental. There are multiple pathways to come to this.”</p>
+<p><em>[<a href="https://www.additudemag.com/emotional-regulation-adhd-kids-strategies/?src=embed_link">Read: The Key to ADHD Emotional Regulation? Cultivating Gratitude, Pride &amp; Compassion</a>]</em></p>
+<p>If the study’s findings are replicated, Castellanos says, it would become a new presentation in a future version of the <em>DSM</em>. “I served on the <em>DSM-5</em> committee, and we were explicitly reminded that the <em>DSM</em> follows the field; it does not lead it. It’s only when the scientific evidence is strongly supportive that <em>DSM</em> changes are allowed. Otherwise, it’s too disruptive.”</p>
+<p>Stephen V. Faraone, Ph.D., distinguished professor at SUNY Upstate Medical University, said he believes that emotional dysregulation was not included in the <i>DSM-5</i> because it might have made differential diagnosis with <a href="https://www.additudemag.com/slideshows/do-i-have-anxiety-treatment-types/">anxiety</a> and mood disorders more difficult, especially in primary care. He also said he was skeptical that ADHD can be divided into biological subtypes, adding that underlying ADHD brain mechanisms exist along a spectrum and do not fall neatly into separate categories.</p>
+<p>The study’s researchers said the findings may eventually create a path toward developing personalized therapeutic strategies.</p>
+<h2>Emotional Dysregulation: Next Steps</h2>
+<ul>
+<li><strong>Free Download:</strong> <a href="https://www.additudemag.com/download/understanding-adhd-emotions-strategies-for-managing-feelings/?src=embed_link">Rein In Intense ADHD Emotions </a></li>
+<li><strong>Self-Test:</strong> <a href="https://www.additudemag.com/emotional-hyperarousal-adhd-self-test/?src=embed_link">Could You Have Emotional Hyperarousal?</a></li>
+<li><strong>Read:</strong> <a href="https://www.additudemag.com/emotional-distress-regulation-skills/?src=embed_link">How to Stop Emotional Distress from Snowballing</a></li>
+</ul>
+<p><em>Carole Fleck is Editor-in-Chief at ADDitude magazine.</em></p>
+
+
+<p><span><b>ADDITUDE IS HUMAN</b></span><br>
+Artificial intelligence does not create or edit any written content published by ADDitude. Our editorial team is 100% human, and our mission is simple: listen to and serve our readers with hand-crafted, expert-informed resources. To support ADDitude, <a href="https://subscribe.additudemag.com/ADD/?f=paidnew">please consider subscribing</a>. Your readership and support help make our commitment possible. Thank you.</p>
+
+
+<h3>Sources</h3>
+<p><a></a>1Pan, N., Long, Y., Qin, K., et al. (2026). Mapping ADHD heterogeneity and biotypes by topological deviations in morphometric similarity networks. <em>JAMA Psychiatry. </em> <a href="https://doi.org/10.1001/jamapsychiatry.2026.0001">https://doi.org/10.1001/jamapsychiatry.2026.0001</a></p></div>
+</article>
+<article class="article-card" id="artikel-2353">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "The New Energy Stalemate in Ukraine", "image": [], "datePublished": "2026-10-23T08:33:00-04:00", "dateModified": "2026-10-23T08:33:00-04:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-2353"}</script>
+    <h2>The New Energy Stalemate in Ukraine</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp;
+        <a href="https://www.foreignaffairs.com/ukraine/new-energy-stalemate-ukraine" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">Tatiana Mitrova, a fellow at Columbia University’s Center on Global Energy Policy and former energy scholar at Moscow’s Russian Academy of Sciences, and Sergey Vakulenko, an oil and gas expert at Carnegie’s Russia Eurasia Center, argue that Russia and Ukraine are locked in an energy war that has become an adaptation spiral, despite growing human and economic costs and despite current US pressure on Ukraine. They observe Ukraine’s remarkable ability to withstand Russian strikes, while questioning claims that long-range Ukrainian strikes will be able to achieve game-changing damage on Russia. Ukraine and Russia have transformed the role of energy warfare in modern conflict, drawing on low costs drones but also new forms of technological resilience that are likely to make wars longer and more dangerous.</div>
+</article>
+<article class="article-card" id="artikel-3414">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Meanwhile, on Remodelista: 7 Finds for an Organized (and Stylish) Home", "image": [], "datePublished": "2026-10-23T08:00:36+00:00", "dateModified": "2026-10-23T08:00:36+00:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-3414"}</script>
+    <h2>Meanwhile, on Remodelista: 7 Finds for an Organized (and Stylish) Home</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Food</strong> &nbsp;|&nbsp;
+        <a href="https://www.gardenista.com/posts/meanwhile-remodelista-7-finds-organized-stylish-home/" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body"><p>Why wait for spring to declutter? Fall, when you’re readying your nest for a couple seasons of indoor pursuits, may be the better time to get organized. We spotted on Remodelista some particularly good-looking storage finds. Happy shopping!</p>
+<p><img alt="" src="https://media.gardenista.com/wp-content/uploads/2024/04/shaker-style-cherry-wood-wastebasket-via-orne-de-feuillles-tokyo-733x550.jpg"> Above: Elevate your office trash bin with this <a href="https://fave.co/4e6GfCM">Shaker Dust Box,</a> Find more Shaker-inspired finds in <a href="https://www.remodelista.com/posts/shaker-design-continued-trend/">The Year of Shaker: A Design Movement Goes Mainstream (Plus 10 Sightings)</a>.<br>
+<img alt="deVOL Clothes Horse Wood" src="https://media.gardenista.com/wp-content/uploads/2023/08/devol-clothes-horse-wood-733x916.jpg"> Above: Laundry chores may feel less tedious with the <a href="https://www.devolkitchens.com/products/clothes-horse">deVOL Clothes Horse</a>. Discover nine other options in <a href="https://www.remodelista.com/posts/10-easy-pieces-floor-standing-air-drying-racks/">10 Easy Pieces: Wooden Clothes Drying Racks</a>.<br>
+<img alt="Ikea Kolbjorn Shelf Unit In Situ" src="http://www.gardenista.com/wp-content/uploads/2026/10/ikea-kolbjorn-shelf-unit-short-733x733.jpg"> Above: Remodelista editors spotted Ikea’s <a href="https://www.ikea.com/us/en/p/kolbjoern-shelf-unit-indoor-outdoor-beige-60409294/">Kolbjörn Storage Shelf</a> in Julianne Moore’s NYC apartment and did a deep dive in <a href="https://www.remodelista.com/posts/julianne-moore-ikea-kolbjorn-kitchen-helf/">Find of the Week: The Ikea Shelf Everyone’s Talking About</a>.<br>
+<img alt="the-venetian-pantry-london-pantry" src="https://media.gardenista.com/wp-content/uploads/2022/10/the-venetian-pantry-london-pantry-1-733x916.jpg"> Above: Want a pantry as neat and appealing as this one? Try Crate &amp; Barrel’s <a href="https://www.crateandbarrel.com/crate-and-barrel-extra-large-round-glass-canister-with-bamboo-lid/s631741">Extra-Large Round Glass Canister with Bamboo Lid</a>, and head over to <a href="https://www.remodelista.com/posts/glass-food-storage-jars-the-venetian-pantry/">Remodelista Reconnaissance: Good-Looking Storage Jars in a Designer’s Pantry</a> to learn more.<br>
+<img alt="Japanese waxed canvas bags at Building Block Etc., a design gallery in Silver Lake, LA" src="https://media.gardenista.com/wp-content/uploads/2026/09/japanese-waxed-canvas-bags-at-building-block-etc-a-design-gallery-in-silverlake-la-733x883.jpg"> Above: You’ll want everything in this <a href="https://www.remodelista.com/posts/building-block-etc-design-gallery-los-angeles/">Under-the-Radar Indie Goods for the Home in LA’s Silver Lake</a>, including these waxed canvas bags by a Japanese artist.<br>
+<img alt="Birch Plywood Record and Book Holder from Unfnshed in San Diego" src="https://media.gardenista.com/wp-content/uploads/2026/09/record-book-holder-unfinished-733x733.jpeg"> Above: Unfnshed’s <a href="https://unfnshed.com/products/record-book-holder">Record/Book Holder</a> is a stylish way to both store and display. See <a href="https://www.remodelista.com/posts/editors-cut-home-office-upgrades-smoother-stress-free-workdays/">The Editors’ Cut: Home Office Upgrades for Smoother, Stress-Free Workdays</a> for more ideas.<br>
+<img alt="Pulley Maid Wall-Mounted Plate Rack" src="https://media.gardenista.com/wp-content/uploads/2026/08/pulley-maid-wall-mounted-rack-733x677.jpg"> Above: So many beautiful wood plate racks in Julie’s roundup, like this <a href="https://pulleymaid.com/wooden-plate-rack.htm">Pulley Maid Wall Mounted Plate Rack</a>. For more, see <a href="https://www.remodelista.com/posts/10-easy-pieces-wall-mounted-plate-racks/v/">10 Easy Pieces: Wall-Mounted Wooden Plate Racks</a>.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://www.gardenista.com/posts/meanwhile-remodelista-inside/">Meanwhile, on Remodelista: Inside Out</a></li>
+<li><a href="https://www.gardenista.com/posts/meanwhile-remodelista-outdoor-spaces-european-edition/">Meanwhile, on Remodelista: Chic Outdoor Spaces, European Edition</a></li>
+<li><a href="https://www.gardenista.com/posts/meanwhile-remodelista-summer-cotttage/">Meanwhile, on Remodelista: The Summer Cottage</a></li>
+</ul></div>
+</article>
+<article class="article-card" id="artikel-4313">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Retro gaming is being overrun with AI", "image": [], "datePublished": "2026-10-23T08:00:00-04:00", "dateModified": "2026-10-23T08:00:00-04:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-4313"}</script>
+    <h2>Retro gaming is being overrun with AI</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp;
+        <a href="https://www.theverge.com/ai-artificial-intelligence/1015430/ai-retro-games-decomp-recomp-port" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+
+<img alt="" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/STK465_VIDEO_GAMES_EMULATOR__CVirginia_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100">
+	
+
+		
+
+<p>Retro video games are everywhere lately - especially in places where they aren't supposed to be. <a href="https://www.theverge.com/games/1004952/open-halo-ce-web"><em>Halo</em> in a web browser</a>, <a href="https://www.theverge.com/games/1005911/this-zelda-wind-waker-recomp-is-making-me-question-my-commitment-to-authenticity"><em>Wind Waker</em> on the iPhone</a>, <a href="https://www.theverge.com/games/1015804/smash-bros-in-your-living-room-xelee-mixed-reality-quest-3-port"><em>Super Smash Bros.</em> in mixed reality</a>.  Over the past month or so, these kinds of unexpected projects have gone viral with incredible frequency thanks to new AI tools, as hobbyists take apart games and then rebuild them for new platforms. But while AI has supercharged the pace of these ports, it's also tearing apart tight-knit communities dedicated to preserving games.</p>
+<p>Decomps and recomps - shorthand for decompile and recompile - are <a href="https://www.theverge.com/23301428/legend-of-zelda-ship-of-harkinian">a form of reverse engineering</a> that involves breaking a game down to …</p>
+<p><a href="https://www.theverge.com/ai-artificial-intelligence/1015430/ai-retro-games-decomp-recomp-port">Read the full story at The Verge.</a></p></div>
+</article>
+<article class="article-card" id="artikel-3777">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Breakthrough PTSD treatment achieves 68% remission rate in clinical trial", "image": [], "datePublished": "2026-10-23T07:02:25-04:00", "dateModified": "2026-10-23T07:02:25-04:00", "mainEntityOfPage": "https://thenewsday112.github.io/pyton/page163.html#artikel-3777"}</script>
+    <h2>Breakthrough PTSD treatment achieves 68% remission rate in clinical trial</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Health</strong> &nbsp;|&nbsp;
+        <a href="https://www.sciencedaily.com/releases/2026/10/261022081309.htm" target="_blank" rel="nofollow noopener">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">A newly FDA-cleared PTSD treatment uses personalized brain mapping and magnetic stimulation to target abnormal brain activity, with a clinical trial reporting a 52% reduction in symptoms and 68% remission. Researchers believe the technology could transform PTSD care and pave the way for more precise treatments for other mental health conditions.</div>
+</article>
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+<div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html" class="active">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>
